@@ -8,14 +8,21 @@
   <sprites name="sprites">
     <sprite>sprites\sprite_Arm</sprite>
     <sprite>sprites\sprite_Head</sprite>
+    <sprite>sprites\sprite_Body</sprite>
+    <sprite>sprites\sprite_Skirt</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_Floor</background>
     <background>background\tile_Sky</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\script0.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\Head</object>
+    <object>objects\Body</object>
+    <object>objects\Skirt</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
