@@ -17,7 +17,8 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\script0.gml</script>
+    <script>scripts\head_com_x.gml</script>
+    <script>scripts\head_com_y.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Head</object>
@@ -28,6 +29,11 @@
     <room>rooms\room0</room>
     <room>rooms\room1</room>
   </rooms>
+  <constants number="3">
+    <constant name="HEAD_COM_SHIFT">16</constant>
+    <constant name="HEAD_SPRING_CONSTANT">1</constant>
+    <constant name="HEAD_SPRING_STEP">8</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
