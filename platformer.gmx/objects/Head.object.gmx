@@ -30,13 +30,22 @@ spring_x = head_com_x(self);
 spring_y = head_com_y(self);
 
 // Setup
-
+var head, body, skirt;
+head = self;
+body = instance_create(phy_position_x, head_com_y(self) + HEAD_COM_SHIFT, Body);
+skirt = instance_create(phy_position_x, head_com_y(self) + 3 * HEAD_COM_SHIFT, Skirt);
+physics_joint_revolute_create(
+    head, body, head_com_x(self), head_com_y(self) + HEAD_COM_SHIFT,
+    -HEAD_ANGLE_LIMIT, HEAD_ANGLE_LIMIT, true, 0, 0, false, false);
+physics_joint_revolute_create(
+    body, skirt, head_com_x(self), head_com_y(self) + 3 * HEAD_COM_SHIFT,
+    -HEAD_ANGLE_LIMIT, HEAD_ANGLE_LIMIT, true, 0, 0, false, false);
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -53,8 +62,102 @@ spring_y = head_com_y(self);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
-draw_circle_color(head_com_x(self), head_com_y(self), 6, c_red, c_blue, false);
+            <string>physics_apply_force(
+    head_com_x(self), head_com_y(self),
+    HEAD_SPRING_CONSTANT * (spring_x - head_com_x(self)),
+    HEAD_SPRING_CONSTANT * (spring_y - head_com_y(self)));
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="40">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>spring_y += HEAD_SPRING_STEP;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="39">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>spring_x += HEAD_SPRING_STEP;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="38">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>spring_y -= HEAD_SPRING_STEP;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="37">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>spring_x -= HEAD_SPRING_STEP;
 </string>
           </argument>
         </arguments>
@@ -64,11 +167,11 @@ draw_circle_color(head_com_x(self), head_com_y(self), 6, c_red, c_blue, false);
   <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
-  <PhysicsObjectDensity>0</PhysicsObjectDensity>
+  <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
-  <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
-  <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
+  <PhysicsObjectLinearDamping>0.999000012874603</PhysicsObjectLinearDamping>
+  <PhysicsObjectAngularDamping>0.999000012874603</PhysicsObjectAngularDamping>
   <PhysicsShapePoints>
     <point>16,16</point>
     <point>16,0</point>
