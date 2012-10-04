@@ -4,7 +4,11 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\Clink</sound>
+    <sound>sound\Clank</sound>
+    <sound>sound\Clinky</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprite_Beer</sprite>
     <sprite>sprites\sprite_Head</sprite>
