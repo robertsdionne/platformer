@@ -29,12 +29,13 @@
     <room>rooms\room0</room>
     <room>rooms\room1</room>
   </rooms>
-  <constants number="5">
+  <constants number="6">
     <constant name="HEAD_COM_SHIFT">16</constant>
     <constant name="HEAD_SPRING_CONSTANT">.25</constant>
     <constant name="HEAD_SPRING_STEP">8</constant>
     <constant name="HEAD_ANGLE_LIMIT">60</constant>
     <constant name="HEAD_SPRING_STEP_X">8</constant>
+    <constant name="BEER_ALARM_RATE">5</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
