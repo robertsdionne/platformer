@@ -37,6 +37,15 @@ skirt = instance_create(phy_position_x, phy_com_y + 3 * HEAD_COM_SHIFT, Skirt);
 physics_joint_revolute_create(
     head, body, phy_com_x, phy_com_y + HEAD_COM_SHIFT,
     -HEAD_ANGLE_LIMIT, HEAD_ANGLE_LIMIT, false, 0, 0, false, false);
+var i, beer;
+for (i = 0; i &lt; 5; i += 1) {
+  beer = instance_create(phy_position_x + 32, phy_com_y + HEAD_COM_SHIFT, Beer);
+  physics_joint_prismatic_create(body, beer, phy_com_x, phy_com_y + HEAD_COM_SHIFT, 1, 0, i * 8, (i + 1) * 8, true, 0, 0, false, true);
+}
+for (i = 0; i &lt; 5; i += 1) {
+  beer = instance_create(phy_position_x, phy_com_y + HEAD_COM_SHIFT, Beer);
+  physics_joint_prismatic_create(body, beer, phy_com_x, phy_com_y + HEAD_COM_SHIFT, -1, 0, (i + 1) * 8, (i + 2) * 8, true, 0, 0, false, true);
+}
 physics_joint_revolute_create(
     body, skirt, phy_com_x, phy_com_y + 3 * HEAD_COM_SHIFT,
     -HEAD_ANGLE_LIMIT, HEAD_ANGLE_LIMIT, false, 0, 0, false, false);

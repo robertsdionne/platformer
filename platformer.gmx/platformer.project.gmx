@@ -6,7 +6,7 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprite_Arm</sprite>
+    <sprite>sprites\sprite_Beer</sprite>
     <sprite>sprites\sprite_Head</sprite>
     <sprite>sprites\sprite_Body</sprite>
     <sprite>sprites\sprite_Skirt</sprite>
@@ -23,6 +23,7 @@
     <object>objects\Head</object>
     <object>objects\Body</object>
     <object>objects\Skirt</object>
+    <object>objects\Beer</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
