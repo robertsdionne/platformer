@@ -17,8 +17,7 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\head_com_x.gml</script>
-    <script>scripts\head_com_y.gml</script>
+    <script>scripts\magnitude.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Head</object>
@@ -29,11 +28,12 @@
     <room>rooms\room0</room>
     <room>rooms\room1</room>
   </rooms>
-  <constants number="4">
+  <constants number="5">
     <constant name="HEAD_COM_SHIFT">16</constant>
-    <constant name="HEAD_SPRING_CONSTANT">0.125</constant>
+    <constant name="HEAD_SPRING_CONSTANT">.25</constant>
     <constant name="HEAD_SPRING_STEP">8</constant>
     <constant name="HEAD_ANGLE_LIMIT">60</constant>
+    <constant name="HEAD_SPRING_STEP_X">8</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

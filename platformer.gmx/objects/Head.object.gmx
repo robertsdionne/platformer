@@ -26,20 +26,20 @@
           <argument>
             <kind>1</kind>
             <string>// Instance Variables
-spring_x = head_com_x(self);
-spring_y = head_com_y(self);
+spring_x = phy_com_x;
+spring_length = phy_com_y;
 
 // Setup
 var head, body, skirt;
 head = self;
-body = instance_create(phy_position_x, head_com_y(self) + HEAD_COM_SHIFT, Body);
-skirt = instance_create(phy_position_x, head_com_y(self) + 3 * HEAD_COM_SHIFT, Skirt);
+body = instance_create(phy_position_x, phy_com_y + HEAD_COM_SHIFT, Body);
+skirt = instance_create(phy_position_x, phy_com_y + 3 * HEAD_COM_SHIFT, Skirt);
 physics_joint_revolute_create(
-    head, body, head_com_x(self), head_com_y(self) + HEAD_COM_SHIFT,
-    -HEAD_ANGLE_LIMIT, HEAD_ANGLE_LIMIT, true, 0, 0, false, false);
+    head, body, phy_com_x, phy_com_y + HEAD_COM_SHIFT,
+    -HEAD_ANGLE_LIMIT, HEAD_ANGLE_LIMIT, false, 0, 0, false, false);
 physics_joint_revolute_create(
-    body, skirt, head_com_x(self), head_com_y(self) + 3 * HEAD_COM_SHIFT,
-    -HEAD_ANGLE_LIMIT, HEAD_ANGLE_LIMIT, true, 0, 0, false, false);
+    body, skirt, phy_com_x, phy_com_y + 3 * HEAD_COM_SHIFT,
+    -HEAD_ANGLE_LIMIT, HEAD_ANGLE_LIMIT, false, 0, 0, false, false);
 </string>
           </argument>
         </arguments>
@@ -62,10 +62,15 @@ physics_joint_revolute_create(
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>physics_apply_force(
-    head_com_x(self), head_com_y(self),
-    HEAD_SPRING_CONSTANT * (spring_x - head_com_x(self)),
-    HEAD_SPRING_CONSTANT * (spring_y - head_com_y(self)));
+            <string>var length, nx, ny, ds;
+length = magnitude(phy_com_x - spring_x, phy_com_y);
+nx = (phy_com_x - spring_x) / length;
+ny = phy_com_y / length;
+ds = min(spring_length - length, 0);
+physics_apply_force(
+    phy_com_x, phy_com_y,
+    HEAD_SPRING_CONSTANT * ds * nx,
+    HEAD_SPRING_CONSTANT * ds * ny);
 </string>
           </argument>
         </arguments>
@@ -88,7 +93,7 @@ physics_joint_revolute_create(
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spring_y += HEAD_SPRING_STEP;
+            <string>spring_length += HEAD_SPRING_STEP;
 </string>
           </argument>
         </arguments>
@@ -111,7 +116,7 @@ physics_joint_revolute_create(
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spring_x += HEAD_SPRING_STEP;
+            <string>spring_x += HEAD_SPRING_STEP_X;
 </string>
           </argument>
         </arguments>
@@ -134,7 +139,7 @@ physics_joint_revolute_create(
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spring_y -= HEAD_SPRING_STEP;
+            <string>spring_length -= HEAD_SPRING_STEP;
 </string>
           </argument>
         </arguments>
@@ -157,7 +162,40 @@ physics_joint_revolute_create(
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spring_x -= HEAD_SPRING_STEP;
+            <string>spring_x -= HEAD_SPRING_STEP_X;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var path, ratio;
+path = path_add();
+ratio = spring_length / magnitude(phy_com_x - spring_x, phy_com_y);
+path_set_kind(path, 1);
+path_set_closed(path, false);
+path_add_point(path, spring_x, 0, 0);
+path_add_point(path, spring_x + (phy_com_x - spring_x) / 4, ratio * phy_com_y / 2, 0);
+path_add_point(path, phy_com_x, phy_com_y, 0);
+//draw_line(spring_x, 0, phy_com_x, phy_com_y);
+draw_path(path, 0, 0, true);
+path_delete(path);
 </string>
           </argument>
         </arguments>
@@ -166,14 +204,16 @@ physics_joint_revolute_create(
   </events>
   <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
-  <PhysicsObjectShape>0</PhysicsObjectShape>
+  <PhysicsObjectShape>1</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
-  <PhysicsObjectLinearDamping>0.999000012874603</PhysicsObjectLinearDamping>
+  <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
   <PhysicsObjectAngularDamping>0.999000012874603</PhysicsObjectAngularDamping>
   <PhysicsShapePoints>
-    <point>16,16</point>
-    <point>16,0</point>
+    <point>0,0</point>
+    <point>32,0</point>
+    <point>32,32</point>
+    <point>0,32</point>
   </PhysicsShapePoints>
 </object>
