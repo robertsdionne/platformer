@@ -5,9 +5,9 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\Clink</sound>
-    <sound>sound\Clank</sound>
-    <sound>sound\Clinky</sound>
+    <sound>sound\sound_Clink</sound>
+    <sound>sound\sound_Clank</sound>
+    <sound>sound\sound_Clinky</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprite_Beer</sprite>

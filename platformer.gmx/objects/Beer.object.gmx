@@ -171,7 +171,7 @@ previously_clanked = false;
             <kind>1</kind>
             <string>clanked = true;
 if (!previously_clanked) {
-  audio_play_sound(choose(Clink, Clank, Clinky), random(1), false);
+  audio_play_sound(choose(sound_Clink, sound_Clank, sound_Clinky), random(1), false);
 }
 </string>
           </argument>
@@ -185,12 +185,12 @@ if (!previously_clanked) {
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
-  <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
+  <PhysicsObjectLinearDamping>0.5</PhysicsObjectLinearDamping>
   <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
   <PhysicsShapePoints>
     <point>0,0</point>
-    <point>8,0</point>
-    <point>8,16</point>
+    <point>7,0</point>
+    <point>7,16</point>
     <point>0,16</point>
   </PhysicsShapePoints>
 </object>
