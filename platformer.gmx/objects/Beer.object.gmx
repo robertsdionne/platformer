@@ -52,7 +52,7 @@
           <argument>
             <kind>1</kind>
             <string>if (90 &lt; abs(phy_rotation % 360) &amp;&amp; abs(phy_rotation % 360) &lt; 270) {
-  effect_create_below(ef_smoke, phy_com_x, phy_position_y, 0, c_olive);
+  effect_create_below(ef_smoke, phy_com_x, phy_position_y, 0, c_white);
 }
 </string>
           </argument>
