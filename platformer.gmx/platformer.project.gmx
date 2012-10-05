@@ -40,7 +40,7 @@
     <room>rooms\room0</room>
     <room>rooms\room1</room>
   </rooms>
-  <constants number="11">
+  <constants number="13">
     <constant name="HEAD_COM_SHIFT">16</constant>
     <constant name="HEAD_SPRING_CONSTANT">.25</constant>
     <constant name="HEAD_SPRING_STEP">8</constant>
@@ -52,6 +52,8 @@
     <constant name="FERRIS_WHEEL_TURN_RATE">2 * pi / 30 / 30</constant>
     <constant name="BUCKET_SPRING_CONSTANT">10</constant>
     <constant name="BEER_COUNT">10</constant>
+    <constant name="MIN_ROPE_LENGTH">480</constant>
+    <constant name="MAX_ROPE_LENGTH">736</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

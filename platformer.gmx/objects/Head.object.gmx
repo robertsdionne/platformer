@@ -141,7 +141,9 @@ physics_apply_force(
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spring_length += HEAD_SPRING_STEP;
+            <string>if (spring_length &lt; MAX_ROPE_LENGTH) {
+  spring_length += HEAD_SPRING_STEP;
+}
 </string>
           </argument>
         </arguments>
@@ -187,7 +189,9 @@ physics_apply_force(
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spring_length -= HEAD_SPRING_STEP;
+            <string>if (spring_length &gt; MIN_ROPE_LENGTH) {
+  spring_length -= HEAD_SPRING_STEP;
+}
 </string>
           </argument>
         </arguments>
