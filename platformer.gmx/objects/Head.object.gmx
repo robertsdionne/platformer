@@ -28,27 +28,20 @@
             <string>// Instance Variables
 spring_x = phy_com_x;
 spring_length = phy_com_y;
+next_beer = 0;
 
 // Setup
-var head, body, skirt;
+var head, skirt;
 head = self;
 body = instance_create(phy_position_x, phy_com_y + HEAD_COM_SHIFT, Body);
 skirt = instance_create(phy_position_x, phy_com_y + 3 * HEAD_COM_SHIFT, Skirt);
 physics_joint_revolute_create(
     head, body, phy_com_x, phy_com_y + HEAD_COM_SHIFT,
     -HEAD_ANGLE_LIMIT, HEAD_ANGLE_LIMIT, false, 0, 0, false, false);
-var i, beer;
-for (i = 0; i &lt; 5; i += 1) {
-  beer = instance_create(phy_position_x + 32, phy_com_y + HEAD_COM_SHIFT, Beer);
-  physics_joint_prismatic_create(body, beer, phy_com_x, phy_com_y + HEAD_COM_SHIFT, 1, 0, i * 8, (i + 1) * 8, true, 0, 0, false, true);
-}
-for (i = 0; i &lt; 5; i += 1) {
-  beer = instance_create(phy_position_x, phy_com_y + HEAD_COM_SHIFT, Beer);
-  physics_joint_prismatic_create(body, beer, phy_com_x, phy_com_y + HEAD_COM_SHIFT, -1, 0, (i + 1) * 8, (i + 2) * 8, true, 0, 0, false, true);
-}
 physics_joint_revolute_create(
     body, skirt, phy_com_x, phy_com_y + 3 * HEAD_COM_SHIFT,
     -HEAD_ANGLE_LIMIT, HEAD_ANGLE_LIMIT, false, 0, 0, false, false);
+beer_joint = create_beers(phy_position_x, phy_position_y, phy_com_x, phy_com_y, body);
 </string>
           </argument>
         </arguments>
@@ -80,6 +73,52 @@ physics_apply_force(
     phy_com_x, phy_com_y,
     HEAD_SPRING_CONSTANT * ds * nx,
     HEAD_SPRING_CONSTANT * ds * ny);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="Table">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Collide
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="Bucket">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Collide
 </string>
           </argument>
         </arguments>
@@ -205,6 +244,35 @@ path_add_point(path, phy_com_x, phy_com_y, 0);
 //draw_line(spring_x, 0, phy_com_x, phy_com_y);
 draw_path(path, 0, 0, true);
 path_delete(path);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="10" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (next_beer &lt; BEER_COUNT) {
+  physics_joint_delete(beer_joint[next_beer]);
+  next_beer += 1;
+} else {
+  next_beer = 0;
+  beer_joint = create_beers(phy_position_x, phy_position_y, phy_com_x, phy_com_y, body);
+}
 </string>
           </argument>
         </arguments>
