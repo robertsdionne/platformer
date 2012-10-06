@@ -60,6 +60,7 @@
     <instance objName="Wreath" x="512" y="416" name="inst_ADF0B6DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Wreath" x="576" y="416" name="inst_5A9A9E98" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Wreath" x="640" y="416" name="inst_41E07ACF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Greenery" x="512" y="192" name="inst_90DD41D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Pretzel" x="160" y="608" name="inst_B3CAFC13" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>

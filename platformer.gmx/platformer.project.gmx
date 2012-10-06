@@ -49,6 +49,7 @@
     <object>objects\FerrisWheel</object>
     <object>objects\Table</object>
     <object>objects\Wreath</object>
+    <object>objects\Greenery</object>
     <object>objects\Pretzel</object>
   </objects>
   <rooms name="rooms">
