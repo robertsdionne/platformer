@@ -17,15 +17,28 @@
     <sprite>sprites\sprite_Bucket</sprite>
     <sprite>sprites\sprite_FerrisWheel</sprite>
     <sprite>sprites\sprite_Table</sprite>
+    <sprite>sprites\sprite_Wreath</sprite>
+    <sprite>sprites\sprite_Pretzel</sprite>
+    <sprite>sprites\sprite_Greenery</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_Floor</background>
     <background>background\tile_Sky</background>
+    <background>background\tile_Tent</background>
+    <background>background\tile_Wreath</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path_Greenery0</path>
+    <path>paths\path_Greenery1</path>
+    <path>paths\path_Greenery2</path>
+    <path>paths\path_Greenery3</path>
+    <path>paths\path_Greenery4</path>
+    <path>paths\path_Greenery5</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\magnitude.gml</script>
     <script>scripts\create_beers.gml</script>
+    <script>scripts\draw_greenery.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Head</object>
@@ -35,6 +48,8 @@
     <object>objects\Bucket</object>
     <object>objects\FerrisWheel</object>
     <object>objects\Table</object>
+    <object>objects\Wreath</object>
+    <object>objects\Pretzel</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
