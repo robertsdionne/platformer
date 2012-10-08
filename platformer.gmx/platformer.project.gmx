@@ -20,6 +20,8 @@
     <sprite>sprites\sprite_Wreath</sprite>
     <sprite>sprites\sprite_Pretzel</sprite>
     <sprite>sprites\sprite_Greenery</sprite>
+    <sprite>sprites\sprite_Bird</sprite>
+    <sprite>sprites\sprite_AngryMob</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_Floor</background>
@@ -42,6 +44,7 @@
   </scripts>
   <objects name="objects">
     <object>objects\Head</object>
+    <object>objects\Bird</object>
     <object>objects\Body</object>
     <object>objects\Skirt</object>
     <object>objects\Beer</object>
@@ -51,6 +54,7 @@
     <object>objects\Wreath</object>
     <object>objects\Greenery</object>
     <object>objects\Pretzel</object>
+    <object>objects\AngryMob</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
