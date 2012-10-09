@@ -28,12 +28,13 @@
     <sprite>sprites\sprite_AngryMob</sprite>
     <sprite>sprites\sprite_Block</sprite>
     <sprite>sprites\sprite_Hand</sprite>
+    <sprite>sprites\sprite_Hand2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_Floor</background>
-    <background>background\tile_Sky</background>
-    <background>background\tile_Tent</background>
     <background>background\tile_Wreath</background>
+    <background>background\background_Background</background>
+    <background>background\background_Overlay</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path_Greenery0</path>
@@ -75,7 +76,7 @@
     <constant name="HEAD_SPRING_CONSTANT">.25</constant>
     <constant name="HEAD_SPRING_STEP">8</constant>
     <constant name="HEAD_ANGLE_LIMIT">60</constant>
-    <constant name="HEAD_SPRING_STEP_X">8</constant>
+    <constant name="HEAD_SPRING_STEP_X">4</constant>
     <constant name="BEER_ALARM_RATE">5</constant>
     <constant name="FERRIS_WHEEL_BUCKET_COUNT">5</constant>
     <constant name="FERRIS_WHEEL_BUCKET_RADIUS">256</constant>
