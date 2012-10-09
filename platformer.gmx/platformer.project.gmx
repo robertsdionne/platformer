@@ -17,6 +17,8 @@
     <sprite>sprites\sprite_Body</sprite>
     <sprite>sprites\sprite_Skirt</sprite>
     <sprite>sprites\sprite_Bucket</sprite>
+    <sprite>sprites\sprite_BucketWall</sprite>
+    <sprite>sprites\sprite_BucketFloor</sprite>
     <sprite>sprites\sprite_FerrisWheel</sprite>
     <sprite>sprites\sprite_Table</sprite>
     <sprite>sprites\sprite_Wreath</sprite>
@@ -54,6 +56,8 @@
     <object>objects\Skirt</object>
     <object>objects\Beer</object>
     <object>objects\Bucket</object>
+    <object>objects\BucketWall</object>
+    <object>objects\BucketFloor</object>
     <object>objects\FerrisWheel</object>
     <object>objects\Table</object>
     <object>objects\Wreath</object>
@@ -65,7 +69,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
-    <room>rooms\room1</room>
   </rooms>
   <constants number="15">
     <constant name="HEAD_COM_SHIFT">16</constant>
