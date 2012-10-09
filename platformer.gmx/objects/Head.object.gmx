@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>// Instance Variables
 spring_x = phy_com_x;
-spring_length = phy_com_y;
+spring_length = phy_com_y - HAND_Y;
 next_beer = 0;
 
 // Setup
@@ -41,7 +41,7 @@ physics_joint_revolute_create(
 physics_joint_revolute_create(
     body, skirt, phy_com_x, phy_com_y + 3 * HEAD_COM_SHIFT,
     -HEAD_ANGLE_LIMIT, HEAD_ANGLE_LIMIT, false, 0, 0, false, false);
-beer_joint = create_beers(phy_position_x, phy_position_y, phy_com_x, phy_com_y, body);
+create_beers(self, phy_position_x, phy_position_y, phy_com_x, phy_com_y, body);
 </string>
           </argument>
         </arguments>
@@ -65,9 +65,9 @@ beer_joint = create_beers(phy_position_x, phy_position_y, phy_com_x, phy_com_y, 
           <argument>
             <kind>1</kind>
             <string>var length, nx, ny, ds;
-length = magnitude(phy_com_x - spring_x, phy_com_y);
+length = magnitude(phy_com_x - spring_x, phy_com_y - HAND_Y);
 nx = (phy_com_x - spring_x) / length;
-ny = phy_com_y / length;
+ny = (phy_com_y - HAND_Y) / length;
 ds = min(spring_length - length, 0);
 physics_apply_force(
     phy_com_x, phy_com_y,
@@ -239,14 +239,15 @@ physics_apply_force(
             <kind>1</kind>
             <string>var path, ratio;
 path = path_add();
-ratio = spring_length / magnitude(phy_com_x - spring_x, phy_com_y);
+ratio = spring_length / magnitude(phy_com_x - spring_x, phy_com_y - HAND_Y);
 path_set_kind(path, 1);
 path_set_closed(path, false);
-path_add_point(path, -view_xview[0] + spring_x, 0, 0);
-path_add_point(path, -view_xview[0] + spring_x + (phy_com_x - spring_x) / 4, ratio * phy_com_y / 2, 0);
+path_add_point(path, -view_xview[0] + spring_x, HAND_Y, 0);
+path_add_point(path, -view_xview[0] + spring_x + (phy_com_x - spring_x) / 4, ratio * (phy_com_y - HAND_Y) / 2 + HAND_Y, 0);
 path_add_point(path, -view_xview[0] + phy_com_x, phy_com_y, 0);
 //draw_line(spring_x, 0, phy_com_x, phy_com_y);
 draw_path(path, 0, 0, true);
+draw_sprite(sprite_Hand, 0, spring_x - sprite_get_width(sprite_Hand) + 80 - view_xview[0], -64);
 path_delete(path);
 </string>
           </argument>
@@ -272,10 +273,11 @@ path_delete(path);
             <kind>1</kind>
             <string>if (next_beer &lt; BEER_COUNT) {
   physics_joint_delete(beer_joint[next_beer]);
+  beer[next_beer].released = true;
   next_beer += 1;
 } else {
   next_beer = 0;
-  beer_joint = create_beers(phy_position_x, phy_position_y, phy_com_x, phy_com_y, body);
+  create_beers(self, phy_position_x, phy_position_y, phy_com_x, phy_com_y, body);
 }
 </string>
           </argument>
