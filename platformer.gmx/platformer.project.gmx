@@ -30,6 +30,7 @@
     <sprite>sprites\sprite_Block</sprite>
     <sprite>sprites\sprite_Hand</sprite>
     <sprite>sprites\sprite_Hand2</sprite>
+    <sprite>sprites\sprite_FerrisBase</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_Floor</background>
@@ -72,6 +73,7 @@
     <object>objects\Block</object>
     <object>objects\HandPlayer1</object>
     <object>objects\IntroductionControl</object>
+    <object>objects\FerrisBase</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Introduction</room>

@@ -149,6 +149,7 @@
     <instance objName="Head" x="256" y="480" name="inst_34CB4653" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Bird" x="768" y="320" name="inst_8E68A6CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FerrisWheel" x="1248" y="352" name="inst_212A2682" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="FerrisBase" x="1120" y="352" name="inst_FF1FD5C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tile_Floor" x="0" y="608" w="3100" h="50" xo="0" yo="0" id="10000000" name="inst_83DC745E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
