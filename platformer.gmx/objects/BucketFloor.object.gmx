@@ -2,7 +2,7 @@
 <object>
   <spriteName>sprite_BucketFloor</spriteName>
   <solid>-1</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -111,8 +111,8 @@
   <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
   <PhysicsShapePoints>
     <point>0,0</point>
-    <point>80,0</point>
-    <point>80,8</point>
+    <point>112,0</point>
+    <point>112,8</point>
     <point>0,8</point>
   </PhysicsShapePoints>
 </object>

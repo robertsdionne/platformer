@@ -2,7 +2,7 @@
 <object>
   <spriteName>sprite_BucketWall</spriteName>
   <solid>-1</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -112,7 +112,7 @@
   <PhysicsShapePoints>
     <point>0,0</point>
     <point>8,0</point>
-    <point>8,96</point>
-    <point>0,96</point>
+    <point>8,56</point>
+    <point>0,56</point>
   </PhysicsShapePoints>
 </object>

@@ -2,7 +2,7 @@
 <object>
   <spriteName>sprite_Bucket</spriteName>
   <solid>-1</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -29,10 +29,13 @@
 
 // Setup
 var left_wall, right_wall, bottom;
-left_wall = instance_create(phy_position_x, phy_position_y, BucketWall);
+left_wall = instance_create(
+    phy_position_x + 16,
+    phy_position_y + sprite_get_height(sprite_Bucket) - sprite_get_height(sprite_BucketWall), BucketWall);
 right_wall = instance_create(
-    phy_position_x + sprite_get_width(sprite_Bucket) - sprite_get_width(sprite_BucketWall), phy_position_y, BucketWall);
-bottom = instance_create(phy_position_x + sprite_get_width(sprite_BucketWall),
+    phy_position_x + sprite_get_width(sprite_Bucket) - sprite_get_width(sprite_BucketWall) - 16,
+    phy_position_y + sprite_get_height(sprite_Bucket) - sprite_get_height(sprite_BucketWall), BucketWall);
+bottom = instance_create(phy_position_x + sprite_get_width(sprite_BucketWall) + 16,
     phy_position_y + sprite_get_height(sprite_Bucket) - sprite_get_height(sprite_BucketFloor), BucketFloor);
 physics_joint_prismatic_create(self, left_wall, phy_com_x, phy_com_y, -1, 0, 52, 52, true, 0, 0, false, false);
 physics_joint_prismatic_create(self, right_wall, phy_com_x, phy_com_y, 1, 0, 52, 52, true, 0, 0, false, false);
