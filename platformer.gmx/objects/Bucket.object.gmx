@@ -2,7 +2,7 @@
 <object>
   <spriteName>sprite_Bucket</spriteName>
   <solid>-1</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -104,8 +104,8 @@ physics_apply_force(phy_com_x, phy_com_y,
   <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
   <PhysicsShapePoints>
     <point>0,0</point>
-    <point>96,0</point>
-    <point>96,96</point>
-    <point>0,96</point>
+    <point>160,0</point>
+    <point>160,160</point>
+    <point>0,160</point>
   </PhysicsShapePoints>
 </object>
