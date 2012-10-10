@@ -226,6 +226,8 @@ path_add_point(path, -view_xview[0] + phy_com_x, phy_com_y, 0);
 draw_path(path, 0, 0, true);
 draw_sprite(sprite_Hand, 0, spring_x - sprite_get_width(sprite_Hand) + 80 - view_xview[0], -64);
 path_delete(path);
+background_y[1] -= 8;
+background_y[2] += 8;
 </string>
           </argument>
         </arguments>
