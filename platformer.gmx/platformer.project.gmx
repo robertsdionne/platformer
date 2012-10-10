@@ -24,7 +24,8 @@
     <sprite>sprites\sprite_Wreath</sprite>
     <sprite>sprites\sprite_Pretzel</sprite>
     <sprite>sprites\sprite_Greenery</sprite>
-    <sprite>sprites\sprite_Bird</sprite>
+    <sprite>sprites\sprite_BirdFlap</sprite>
+    <sprite>sprites\sprite_BirdSoar</sprite>
     <sprite>sprites\sprite_AngryMob</sprite>
     <sprite>sprites\sprite_Block</sprite>
     <sprite>sprites\sprite_Hand</sprite>
@@ -71,7 +72,7 @@
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
-  <constants number="15">
+  <constants number="17">
     <constant name="HEAD_COM_SHIFT">16</constant>
     <constant name="HEAD_SPRING_CONSTANT">.25</constant>
     <constant name="HEAD_SPRING_STEP">8</constant>
@@ -87,6 +88,8 @@
     <constant name="MAX_ROPE_LENGTH">736</constant>
     <constant name="HAND_Y">128</constant>
     <constant name="BEER_MAX_COLLIDE_VELOCITY">8</constant>
+    <constant name="BIRD_TORQUE_SPRING_CONSTANT">.125</constant>
+    <constant name="BIRD_VELOCITY_THRESHOLD">2</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
