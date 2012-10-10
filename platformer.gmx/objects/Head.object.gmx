@@ -33,14 +33,14 @@ next_beer = 0;
 // Setup
 var head, skirt;
 head = self;
-body = instance_create(phy_position_x, phy_com_y + HEAD_COM_SHIFT, Body);
-skirt = instance_create(phy_position_x, phy_com_y + 3 * HEAD_COM_SHIFT, Skirt);
+body = instance_create(phy_position_x, phy_com_y + sprite_get_height(sprite_Head) / 2 - 4, Body);
+skirt = instance_create(phy_position_x, phy_com_y + sprite_get_height(sprite_Head) / 2 + sprite_get_height(sprite_Body) - 8, Skirt);
 physics_joint_revolute_create(
-    head, body, phy_com_x, phy_com_y + HEAD_COM_SHIFT,
-    -HEAD_ANGLE_LIMIT, HEAD_ANGLE_LIMIT, false, 0, 0, false, false);
+    head, body, phy_com_x, phy_com_y + sprite_get_height(sprite_Head) / 2,
+    -HEAD_ANGLE_LIMIT, HEAD_ANGLE_LIMIT, true, 0, 0, false, false);
 physics_joint_revolute_create(
-    body, skirt, phy_com_x, phy_com_y + 3 * HEAD_COM_SHIFT,
-    -HEAD_ANGLE_LIMIT, HEAD_ANGLE_LIMIT, false, 0, 0, false, false);
+    body, skirt, phy_com_x, phy_com_y + + sprite_get_height(sprite_Head) / 2 + sprite_get_height(sprite_Body) - 8,
+    -HEAD_ANGLE_LIMIT, HEAD_ANGLE_LIMIT, true, 0, 0, false, false);
 create_beers(self, phy_position_x, phy_position_y, phy_com_x, phy_com_y, body);
 </string>
           </argument>

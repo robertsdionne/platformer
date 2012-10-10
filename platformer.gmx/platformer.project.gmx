@@ -36,6 +36,7 @@
     <background>background\tile_Wreath</background>
     <background>background\background_Background</background>
     <background>background\background_Overlay</background>
+    <background>background\background_Curtains</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path_Greenery0</path>
@@ -50,6 +51,8 @@
     <script>scripts\create_beers.gml</script>
     <script>scripts\draw_greenery.gml</script>
     <script>scripts\maybe_break_beer.gml</script>
+    <script>scripts\rotate_x.gml</script>
+    <script>scripts\rotate_y.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Head</object>
@@ -68,8 +71,10 @@
     <object>objects\AngryMob</object>
     <object>objects\Block</object>
     <object>objects\HandPlayer1</object>
+    <object>objects\IntroductionControl</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Introduction</room>
     <room>rooms\room0</room>
   </rooms>
   <constants number="17">
