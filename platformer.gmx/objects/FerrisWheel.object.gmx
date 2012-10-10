@@ -62,6 +62,7 @@ for (i = 0; i &lt; FERRIS_WHEEL_BUCKET_COUNT; i += 1) {
           <argument>
             <kind>1</kind>
             <string>theta += FERRIS_WHEEL_TURN_RATE;
+phy_rotation = radtodeg(theta);
 </string>
           </argument>
         </arguments>
