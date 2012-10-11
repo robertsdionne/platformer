@@ -195,7 +195,7 @@ maybe_break_beer(self);
           <argument>
             <kind>1</kind>
             <string>// Collide
-maybe_break_beer(self);
+//maybe_break_beer(self);
 </string>
           </argument>
         </arguments>
