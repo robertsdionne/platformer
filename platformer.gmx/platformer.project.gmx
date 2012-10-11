@@ -40,6 +40,7 @@
     <background>background\background_Overlay</background>
     <background>background\background_Curtains</background>
     <background>background\background_Silhouette</background>
+    <background>background\background_Black</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path_Greenery0</path>
