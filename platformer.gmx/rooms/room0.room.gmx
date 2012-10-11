@@ -234,7 +234,6 @@
     <instance objName="Table" x="896" y="592" name="inst_BDBB221A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Table" x="2432" y="592" name="inst_F9EABA41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Table" x="3200" y="592" name="inst_7002C121" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="AngryMob" x="2752" y="544" name="inst_8BAF1B2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tile_Floor" x="0" y="640" w="5800" h="150" xo="0" yo="0" id="10000000" name="inst_A9B3BECA" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
