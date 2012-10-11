@@ -152,7 +152,7 @@
     <instance objName="FerrisBase" x="1120" y="352" name="inst_FF1FD5C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
-    <tile bgName="tile_Floor" x="0" y="608" w="3100" h="50" xo="0" yo="0" id="10000000" name="inst_83DC745E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tile_Floor" x="0" y="640" w="5800" h="150" xo="0" yo="0" id="10000000" name="inst_A9B3BECA" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>-1</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
