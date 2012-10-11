@@ -10,6 +10,7 @@
     <sound>sound\sound_Clinky</sound>
     <sound>sound\sound_BreakBeerLow</sound>
     <sound>sound\sound_BreakBeerHigh</sound>
+    <sound>sound\sound_Music</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprite_Beer</sprite>
