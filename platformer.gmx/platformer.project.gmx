@@ -39,6 +39,7 @@
     <background>background\background_Background</background>
     <background>background\background_Overlay</background>
     <background>background\background_Curtains</background>
+    <background>background\background_Silhouette</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path_Greenery0</path>
@@ -80,7 +81,7 @@
     <room>rooms\Introduction</room>
     <room>rooms\room0</room>
   </rooms>
-  <constants number="17">
+  <constants number="16">
     <constant name="HEAD_COM_SHIFT">16</constant>
     <constant name="HEAD_SPRING_CONSTANT">.25</constant>
     <constant name="HEAD_SPRING_STEP">8</constant>
@@ -92,12 +93,11 @@
     <constant name="FERRIS_WHEEL_TURN_RATE">2 * pi / 30 / 30</constant>
     <constant name="BUCKET_SPRING_CONSTANT">10</constant>
     <constant name="BEER_COUNT">10</constant>
-    <constant name="MIN_ROPE_LENGTH">250</constant>
-    <constant name="MAX_ROPE_LENGTH">736</constant>
     <constant name="HAND_Y">128</constant>
     <constant name="BEER_MAX_COLLIDE_VELOCITY">8</constant>
     <constant name="BIRD_TORQUE_SPRING_CONSTANT">.125</constant>
     <constant name="BIRD_VELOCITY_THRESHOLD">2</constant>
+    <constant name="BIRD_MAX_ROPE_LENGTH">736</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

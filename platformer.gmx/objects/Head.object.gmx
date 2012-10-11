@@ -28,6 +28,8 @@
             <string>// Instance Variables
 spring_x = phy_com_x;
 spring_length = phy_com_y - HAND_Y;
+MIN_ROPE_LENGTH = spring_length;
+MAX_ROPE_LENGTH = spring_length;
 next_beer = 0;
 
 // Setup
@@ -128,56 +130,6 @@ physics_apply_force(
         </arguments>
       </action>
     </event>
-    <event eventtype="5" enumb="87">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (spring_length &gt; MIN_ROPE_LENGTH) {
-  spring_length -= HEAD_SPRING_STEP;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="83">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (spring_length &lt; MAX_ROPE_LENGTH) {
-  spring_length += HEAD_SPRING_STEP;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="5" enumb="68">
       <action>
         <libid>1</libid>
@@ -255,6 +207,29 @@ draw_sprite(sprite_Hand, 0, spring_x - sprite_get_width(sprite_Hand) + 80 - view
 path_delete(path);
 background_y[1] -= 8;
 background_y[2] += 8;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="87">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>physics_apply_impulse(phy_com_x, phy_com_y, 0, -2);
 </string>
           </argument>
         </arguments>

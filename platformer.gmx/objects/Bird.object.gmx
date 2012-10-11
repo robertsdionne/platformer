@@ -213,7 +213,7 @@ if (phy_linear_velocity_x &gt; BIRD_VELOCITY_THRESHOLD &amp;&amp; face_left) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (spring_length &lt; MAX_ROPE_LENGTH) {
+            <string>if (spring_length &lt; BIRD_MAX_ROPE_LENGTH) {
   spring_length += HEAD_SPRING_STEP;
 }
 </string>
