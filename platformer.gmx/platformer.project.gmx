@@ -74,7 +74,6 @@
     <object>objects\Pretzel</object>
     <object>objects\AngryMob</object>
     <object>objects\Block</object>
-    <object>objects\HandPlayer1</object>
     <object>objects\IntroductionControl</object>
     <object>objects\FerrisBase</object>
   </objects>
@@ -82,7 +81,7 @@
     <room>rooms\Introduction</room>
     <room>rooms\room0</room>
   </rooms>
-  <constants number="16">
+  <constants number="18">
     <constant name="HEAD_COM_SHIFT">16</constant>
     <constant name="HEAD_SPRING_CONSTANT">.25</constant>
     <constant name="HEAD_SPRING_STEP">8</constant>
@@ -99,6 +98,8 @@
     <constant name="BIRD_TORQUE_SPRING_CONSTANT">.125</constant>
     <constant name="BIRD_VELOCITY_THRESHOLD">2</constant>
     <constant name="BIRD_MAX_ROPE_LENGTH">736</constant>
+    <constant name="JUMP_REFRESH">30</constant>
+    <constant name="JUMP_POWER">2.5</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
