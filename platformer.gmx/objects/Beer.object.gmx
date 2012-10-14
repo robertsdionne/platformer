@@ -127,7 +127,7 @@ alarm[0] = BEER_ALARM_RATE;
           <argument>
             <kind>1</kind>
             <string>// Collide
-maybe_break_beer(self);
+break_beer(self);
 </string>
           </argument>
         </arguments>

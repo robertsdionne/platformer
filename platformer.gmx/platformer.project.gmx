@@ -55,6 +55,7 @@
     <script>scripts\create_beers.gml</script>
     <script>scripts\draw_greenery.gml</script>
     <script>scripts\maybe_break_beer.gml</script>
+    <script>scripts\break_beer.gml</script>
     <script>scripts\rotate_x.gml</script>
     <script>scripts\rotate_y.gml</script>
     <script>scripts\draw_rope.gml</script>
