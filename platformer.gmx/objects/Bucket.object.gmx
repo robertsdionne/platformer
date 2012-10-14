@@ -30,16 +30,16 @@
 // Setup
 var left_wall, right_wall, bottom;
 left_wall = instance_create(
-    phy_position_x + 16,
+    phy_position_x + BUCKET_WALL_X_OFFSET,
     phy_position_y + sprite_get_height(sprite_Bucket) - sprite_get_height(sprite_BucketWall), BucketWall);
 right_wall = instance_create(
-    phy_position_x + sprite_get_width(sprite_Bucket) - sprite_get_width(sprite_BucketWall) - 16,
+    phy_position_x + sprite_get_width(sprite_Bucket) - sprite_get_width(sprite_BucketWall) - BUCKET_WALL_X_OFFSET,
     phy_position_y + sprite_get_height(sprite_Bucket) - sprite_get_height(sprite_BucketWall), BucketWall);
-bottom = instance_create(phy_position_x + sprite_get_width(sprite_BucketWall) + 16,
+bottom = instance_create(phy_position_x + sprite_get_width(sprite_BucketWall) + BUCKET_WALL_X_OFFSET,
     phy_position_y + sprite_get_height(sprite_Bucket) - sprite_get_height(sprite_BucketFloor), BucketFloor);
-physics_joint_prismatic_create(self, left_wall, phy_com_x, phy_com_y, -1, 0, 52, 52, true, 0, 0, false, false);
-physics_joint_prismatic_create(self, right_wall, phy_com_x, phy_com_y, 1, 0, 52, 52, true, 0, 0, false, false);
-physics_joint_prismatic_create(self, bottom, phy_com_x, phy_com_y, 0, 1, 52, 52, true, 0, 0, false, false);
+physics_joint_prismatic_create(self, left_wall, phy_com_x, phy_com_y, -1, 0, BUCKET_WALL_LIMIT, BUCKET_WALL_LIMIT, true, 0, 0, false, false);
+physics_joint_prismatic_create(self, right_wall, phy_com_x, phy_com_y, 1, 0, BUCKET_WALL_LIMIT, BUCKET_WALL_LIMIT, true, 0, 0, false, false);
+physics_joint_prismatic_create(self, bottom, phy_com_x, phy_com_y, 0, 1, BUCKET_WALL_LIMIT, BUCKET_WALL_LIMIT, true, 0, 0, false, false);
 </string>
           </argument>
         </arguments>
