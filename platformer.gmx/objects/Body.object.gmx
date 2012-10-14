@@ -25,18 +25,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var theta, arm_x, arm_y, right_shoulder_x, right_shoulder_y, left_shoulder_x, left_shoulder_y;
+            <string>var theta, hand_x, hand_y, elbow_x, elbow_y, right_shoulder_x, right_shoulder_y, left_shoulder_x, left_shoulder_y;
 theta = degtorad(phy_rotation);
-arm_x = rotate_x(40, 0, theta);
-arm_y = rotate_y(40, 0, theta);
-right_shoulder_x = rotate_x(10, -15, theta);
-right_shoulder_y = rotate_y(10, -15, theta);
-left_shoulder_x = rotate_x(-10, -15, theta);
-left_shoulder_y = rotate_y(-10, -15, theta);
-draw_line_width(phy_com_x + right_shoulder_x, phy_com_y + right_shoulder_y, phy_com_x + arm_x / 2, phy_com_y + arm_y / 2, 8);
-draw_line_width(phy_com_x + left_shoulder_x, phy_com_y + left_shoulder_y, phy_com_x - arm_x / 2, phy_com_y - arm_y / 2, 8);
-draw_line_width(phy_com_x + arm_x / 2, phy_com_y + arm_y / 2, phy_com_x + arm_x, phy_com_y + arm_y, 8);
-draw_line_width(phy_com_x - arm_x / 2, phy_com_y - arm_y / 2, phy_com_x - arm_x, phy_com_y - arm_y, 8);
+hand_x = rotate_x(PUPPET_HAND_X, PUPPET_HAND_Y, theta);
+hand_y = rotate_y(PUPPET_HAND_X, PUPPET_HAND_Y, theta);
+elbow_x = hand_x / 2;
+elbow_y = hand_y / 2;
+right_shoulder_x = rotate_x(PUPPET_SHOULDER_X, PUPPET_SHOULDER_Y, theta);
+right_shoulder_y = rotate_y(PUPPET_SHOULDER_X, PUPPET_SHOULDER_Y, theta);
+left_shoulder_x = rotate_x(-PUPPET_SHOULDER_X, PUPPET_SHOULDER_Y, theta);
+left_shoulder_y = rotate_y(-PUPPET_SHOULDER_X, PUPPET_SHOULDER_Y, theta);
+draw_line_width(phy_com_x + right_shoulder_x, phy_com_y + right_shoulder_y, phy_com_x + elbow_x, phy_com_y + elbow_y, PUPPET_ARM_WIDTH);
+draw_line_width(phy_com_x + left_shoulder_x, phy_com_y + left_shoulder_y, phy_com_x - elbow_x, phy_com_y - elbow_y, PUPPET_ARM_WIDTH);
+draw_line_width(phy_com_x + elbow_x, phy_com_y + elbow_y, phy_com_x + hand_x, phy_com_y + hand_y, PUPPET_ARM_WIDTH);
+draw_line_width(phy_com_x - elbow_x, phy_com_y - elbow_y, phy_com_x - hand_x, phy_com_y - hand_y, PUPPET_ARM_WIDTH);
 draw_self();
 </string>
           </argument>

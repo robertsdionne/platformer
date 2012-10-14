@@ -81,7 +81,7 @@
     <room>rooms\Introduction</room>
     <room>rooms\room0</room>
   </rooms>
-  <constants number="20">
+  <constants number="25">
     <constant name="HEAD_COM_SHIFT">16</constant>
     <constant name="HEAD_SPRING_CONSTANT">.25</constant>
     <constant name="HEAD_SPRING_STEP">8</constant>
@@ -102,6 +102,11 @@
     <constant name="JUMP_POWER">2.5</constant>
     <constant name="BUCKET_WALL_X_OFFSET">16</constant>
     <constant name="BUCKET_WALL_LIMIT">52</constant>
+    <constant name="PUPPET_HAND_X">40</constant>
+    <constant name="PUPPET_HAND_Y">0</constant>
+    <constant name="PUPPET_SHOULDER_X">10</constant>
+    <constant name="PUPPET_SHOULDER_Y">-15</constant>
+    <constant name="PUPPET_ARM_WIDTH">8</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
