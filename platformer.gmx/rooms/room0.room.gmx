@@ -3,7 +3,7 @@
   <caption></caption>
   <width>5670</width>
   <height>1080</height>
-  <vsnap>32</vsnap>
+  <vsnap>16</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
@@ -235,6 +235,11 @@
     <instance objName="Table" x="2432" y="592" name="inst_F9EABA41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Table" x="3200" y="592" name="inst_7002C121" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="BarSensor" x="320" y="544" name="inst_794D9074" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="BarSensor" x="2240" y="544" name="inst_5213F651" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="BarSensor" x="4160" y="544" name="inst_32047324" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Bar" x="320" y="592" name="inst_83601331" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Bar" x="2240" y="592" name="inst_BC46DC32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Bar" x="4160" y="592" name="inst_EAFD1040" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tile_Floor" x="0" y="640" w="5800" h="150" xo="0" yo="0" id="10000000" name="inst_A9B3BECA" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

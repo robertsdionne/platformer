@@ -80,6 +80,7 @@
     <object>objects\IntroductionControl</object>
     <object>objects\FerrisBase</object>
     <object>objects\BarSensor</object>
+    <object>objects\Bar</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Introduction</room>
