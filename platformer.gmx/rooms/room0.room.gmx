@@ -3,7 +3,7 @@
   <caption></caption>
   <width>5670</width>
   <height>1080</height>
-  <vsnap>16</vsnap>
+  <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
@@ -230,7 +230,7 @@
     <instance objName="FerrisBase" x="2752" y="352" name="inst_FF1FD5C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FerrisWheel" x="2880" y="352" name="inst_212A2682" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Head" x="256" y="512" name="inst_34CB4653" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Bird" x="1568" y="608" name="inst_8E68A6CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Bird" x="1440" y="608" name="inst_8E68A6CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Table" x="896" y="592" name="inst_BDBB221A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Table" x="2432" y="592" name="inst_F9EABA41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Table" x="3200" y="592" name="inst_7002C121" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
