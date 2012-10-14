@@ -32,6 +32,7 @@
     <sprite>sprites\sprite_Hand</sprite>
     <sprite>sprites\sprite_Hand2</sprite>
     <sprite>sprites\sprite_FerrisBase</sprite>
+    <sprite>sprites\sprite_Bar</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_Floor</background>
@@ -78,14 +79,16 @@
     <object>objects\Block</object>
     <object>objects\IntroductionControl</object>
     <object>objects\FerrisBase</object>
+    <object>objects\BarSensor</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Introduction</room>
     <room>rooms\room0</room>
   </rooms>
-  <constants number="29">
+  <constants number="30">
     <constant name="BACKGROUND_SPEED">8</constant>
     <constant name="BEER_ALARM_RATE">5</constant>
+    <constant name="BEER_ANGLE_TOLERANCE">15</constant>
     <constant name="BEER_COUNT">10</constant>
     <constant name="BEER_MAX_COLLIDE_VELOCITY">8</constant>
     <constant name="BIRD_MAX_ROPE_LENGTH">736</constant>
