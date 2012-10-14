@@ -82,31 +82,31 @@
     <room>rooms\room0</room>
   </rooms>
   <constants number="25">
-    <constant name="HEAD_COM_SHIFT">16</constant>
-    <constant name="HEAD_SPRING_CONSTANT">.25</constant>
-    <constant name="HEAD_SPRING_STEP">8</constant>
-    <constant name="HEAD_ANGLE_LIMIT">60</constant>
-    <constant name="HEAD_SPRING_STEP_X">4</constant>
     <constant name="BEER_ALARM_RATE">5</constant>
+    <constant name="BEER_COUNT">10</constant>
+    <constant name="BEER_MAX_COLLIDE_VELOCITY">8</constant>
+    <constant name="BIRD_MAX_ROPE_LENGTH">736</constant>
+    <constant name="BIRD_TORQUE_SPRING_CONSTANT">.125</constant>
+    <constant name="BIRD_VELOCITY_THRESHOLD">2</constant>
+    <constant name="BUCKET_SPRING_CONSTANT">10</constant>
+    <constant name="BUCKET_WALL_LIMIT">52</constant>
+    <constant name="BUCKET_WALL_X_OFFSET">16</constant>
     <constant name="FERRIS_WHEEL_BUCKET_COUNT">5</constant>
     <constant name="FERRIS_WHEEL_BUCKET_RADIUS">256</constant>
     <constant name="FERRIS_WHEEL_TURN_RATE">2 * pi / 30 / 30</constant>
-    <constant name="BUCKET_SPRING_CONSTANT">10</constant>
-    <constant name="BEER_COUNT">10</constant>
     <constant name="HAND_Y">128</constant>
-    <constant name="BEER_MAX_COLLIDE_VELOCITY">8</constant>
-    <constant name="BIRD_TORQUE_SPRING_CONSTANT">.125</constant>
-    <constant name="BIRD_VELOCITY_THRESHOLD">2</constant>
-    <constant name="BIRD_MAX_ROPE_LENGTH">736</constant>
-    <constant name="JUMP_REFRESH">30</constant>
+    <constant name="HEAD_ANGLE_LIMIT">60</constant>
+    <constant name="HEAD_COM_SHIFT">16</constant>
+    <constant name="HEAD_SPRING_CONSTANT">.25</constant>
+    <constant name="HEAD_SPRING_STEP_X">4</constant>
+    <constant name="HEAD_SPRING_STEP">8</constant>
     <constant name="JUMP_POWER">2.5</constant>
-    <constant name="BUCKET_WALL_X_OFFSET">16</constant>
-    <constant name="BUCKET_WALL_LIMIT">52</constant>
+    <constant name="JUMP_REFRESH">30</constant>
+    <constant name="PUPPET_ARM_WIDTH">8</constant>
     <constant name="PUPPET_HAND_X">40</constant>
     <constant name="PUPPET_HAND_Y">0</constant>
     <constant name="PUPPET_SHOULDER_X">10</constant>
     <constant name="PUPPET_SHOULDER_Y">-15</constant>
-    <constant name="PUPPET_ARM_WIDTH">8</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
