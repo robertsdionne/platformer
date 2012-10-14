@@ -317,9 +317,8 @@ path_set_closed(path, false);
 path_add_point(path, spring_x, HAND_Y, 0);
 path_add_point(path, spring_x + (phy_com_x - spring_x) / 4, ratio * (phy_com_y - HAND_Y) / 2 + HAND_Y, 0);
 path_add_point(path, phy_com_x, phy_com_y, 0);
-//draw_line(spring_x, 0, phy_com_x, phy_com_y);
 draw_path(path, 0, 0, true);
-draw_sprite_ext(sprite_Hand, 0, spring_x + sprite_get_width(sprite_Hand) - 80, -64, -1, 1, 0, c_white, 1);
+draw_sprite_ext(sprite_Hand, 0, spring_x + sprite_get_width(sprite_Hand) - HAND_SHIFT_X, HAND_SHIFT_Y, -1, 1, 0, c_white, 1);
 path_delete(path);
 if (falling) {
   sprite = sprite_BirdFlap;
