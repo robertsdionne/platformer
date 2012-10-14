@@ -309,17 +309,10 @@ if (phy_linear_velocity_x &gt; BIRD_VELOCITY_THRESHOLD &amp;&amp; face_left) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var sprite, x_draw, x_scale, path, ratio;
-path = path_add();
+            <string>var sprite, x_draw, x_scale, ratio;
 ratio = spring_length / magnitude(phy_com_x - spring_x, phy_com_y - HAND_Y);
-path_set_kind(path, 1);
-path_set_closed(path, false);
-path_add_point(path, spring_x, HAND_Y, 0);
-path_add_point(path, spring_x + (phy_com_x - spring_x) / 4, ratio * (phy_com_y - HAND_Y) / 2 + HAND_Y, 0);
-path_add_point(path, phy_com_x, phy_com_y, 0);
-draw_path(path, 0, 0, true);
+draw_rope(spring_x, HAND_Y, phy_com_x, phy_com_y, ratio);
 draw_sprite_ext(sprite_Hand, 0, spring_x + sprite_get_width(sprite_Hand) - HAND_SHIFT_X, HAND_SHIFT_Y, -1, 1, 0, c_white, 1);
-path_delete(path);
 if (falling) {
   sprite = sprite_BirdFlap;
 } else {

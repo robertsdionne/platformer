@@ -1,0 +1,14 @@
+var path, a_x, a_y, b_x, b_y, ratio;
+path = path_add();
+a_x = argument0;
+a_y = argument1;
+b_x = argument2;
+b_y = argument3;
+ratio = argument4;
+path_set_kind(path, 1);
+path_set_closed(path, false);
+path_add_point(path, a_x, a_y, 0);
+path_add_point(path, a_x + (b_x - a_x) / 4, ratio * (b_y - a_y) / 2 + a_y, 0);
+path_add_point(path, b_x, b_y, 0);
+draw_path(path, 0, 0, true);
+path_delete(path);

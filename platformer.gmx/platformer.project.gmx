@@ -57,6 +57,7 @@
     <script>scripts\maybe_break_beer.gml</script>
     <script>scripts\rotate_x.gml</script>
     <script>scripts\rotate_y.gml</script>
+    <script>scripts\draw_rope.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Head</object>
