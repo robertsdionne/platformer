@@ -82,7 +82,8 @@
     <room>rooms\Introduction</room>
     <room>rooms\room0</room>
   </rooms>
-  <constants number="27">
+  <constants number="29">
+    <constant name="BACKGROUND_SPEED">8</constant>
     <constant name="BEER_ALARM_RATE">5</constant>
     <constant name="BEER_COUNT">10</constant>
     <constant name="BEER_MAX_COLLIDE_VELOCITY">8</constant>
@@ -110,6 +111,7 @@
     <constant name="PUPPET_HAND_Y">0</constant>
     <constant name="PUPPET_SHOULDER_X">10</constant>
     <constant name="PUPPET_SHOULDER_Y">-15</constant>
+    <constant name="SILHOUETTE_PARALAX">-1</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

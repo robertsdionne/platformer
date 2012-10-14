@@ -224,9 +224,9 @@ ratio = spring_length / magnitude(phy_com_x - spring_x, phy_com_y - HAND_Y);
 draw_rope(spring_x, HAND_Y, phy_com_x, phy_com_y, ratio);
 draw_sprite(sprite_Hand, 0, spring_x - sprite_get_width(sprite_Hand) + HAND_SHIFT_X, HAND_SHIFT_Y);
 draw_self();
-background_y[1] -= 8;
-background_y[2] += 8;
-background_x[5] = -view_xview[0];
+background_y[1] -= BACKGROUND_SPEED;
+background_y[2] += BACKGROUND_SPEED;
+background_x[5] = SILHOUETTE_PARALAX * view_xview[0];
 </string>
           </argument>
         </arguments>
