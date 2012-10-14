@@ -78,6 +78,9 @@
     <object>objects\AngryMob</object>
     <object>objects\Block</object>
     <object>objects\IntroductionControl</object>
+    <object>objects\ViewControl</object>
+    <object>objects\ViewSensor0</object>
+    <object>objects\ViewSensor1</object>
     <object>objects\FerrisBase</object>
     <object>objects\BarSensor</object>
     <object>objects\Bar</object>
@@ -86,7 +89,7 @@
     <room>rooms\Introduction</room>
     <room>rooms\room0</room>
   </rooms>
-  <constants number="30">
+  <constants number="31">
     <constant name="BACKGROUND_SPEED">8</constant>
     <constant name="BEER_ALARM_RATE">5</constant>
     <constant name="BEER_ANGLE_TOLERANCE">15</constant>
@@ -110,13 +113,14 @@
     <constant name="HEAD_SPRING_STEP_X">4</constant>
     <constant name="HEAD_SPRING_STEP">8</constant>
     <constant name="JUMP_POWER">2.5</constant>
-    <constant name="JUMP_REFRESH">30</constant>
+    <constant name="JUMP_REFRESH">45</constant>
     <constant name="PUPPET_ARM_WIDTH">8</constant>
     <constant name="PUPPET_HAND_X">40</constant>
     <constant name="PUPPET_HAND_Y">0</constant>
     <constant name="PUPPET_SHOULDER_X">10</constant>
     <constant name="PUPPET_SHOULDER_Y">-15</constant>
     <constant name="SILHOUETTE_PARALAX">-1</constant>
+    <constant name="VIEW_RATE_DIVISOR">32</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

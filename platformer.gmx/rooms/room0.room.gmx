@@ -40,7 +40,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="Head" xview="0" yview="0" wview="1920" hview="1080" xport="0" yport="0" wport="1920" hport="1080" hborder="128" vborder="128" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="" xview="0" yview="0" wview="1920" hview="1080" xport="0" yport="0" wport="1920" hport="1080" hborder="128" vborder="128" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -240,6 +240,9 @@
     <instance objName="Bar" x="320" y="592" name="inst_83601331" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Bar" x="2240" y="592" name="inst_BC46DC32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Bar" x="4160" y="592" name="inst_EAFD1040" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ViewControl" x="32" y="32" name="inst_6CC4A5F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ViewSensor0" x="1664" y="576" name="inst_93446A15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ViewSensor1" x="3584" y="576" name="inst_35501088" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tile_Floor" x="0" y="640" w="5800" h="150" xo="0" yo="0" id="10000000" name="inst_A9B3BECA" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
