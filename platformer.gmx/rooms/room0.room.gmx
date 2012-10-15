@@ -240,12 +240,36 @@
     <instance objName="ViewControl" x="32" y="32" name="inst_6CC4A5F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ViewSensor0" x="1664" y="576" name="inst_93446A15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ViewSensor1" x="3584" y="576" name="inst_35501088" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="NewTable" x="800" y="464" name="inst_CE4E1E36" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="NewTable" x="2336" y="464" name="inst_B25C5178" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="NewTable" x="3104" y="464" name="inst_BF86C317" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="NewTable" x="4256" y="464" name="inst_8D0CEF3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="NewTable" x="4640" y="464" name="inst_99FA39B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="NewTable" x="5024" y="464" name="inst_ED9150B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="NewTable" x="960" y="624" name="inst_CE4E1E36" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="NewTable" x="2496" y="624" name="inst_B25C5178" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="NewTable" x="3264" y="624" name="inst_BF86C317" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="NewTable" x="4416" y="624" name="inst_8D0CEF3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="NewTable" x="4800" y="624" name="inst_99FA39B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="NewTable" x="5184" y="624" name="inst_ED9150B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="864" y="592" name="inst_50E944AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="992" y="592" name="inst_DDC5E90E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="928" y="592" name="inst_8DE31C49" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="2400" y="592" name="inst_1979D8FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="2464" y="592" name="inst_0E3F6BC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="2592" y="592" name="inst_355E3EF7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="3168" y="592" name="inst_1522A2AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="3360" y="592" name="inst_B6DED6EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="3232" y="592" name="inst_ACBA92B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="4320" y="592" name="inst_D892CEDE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="4384" y="592" name="inst_1872912E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="4512" y="592" name="inst_77B90C77" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="4704" y="592" name="inst_81B73A58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="4768" y="592" name="inst_A91606D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="4896" y="592" name="inst_32156898" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="5088" y="592" name="inst_926F5249" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="5216" y="544" name="inst_CB8F7C3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="5280" y="592" name="inst_8FDC1955" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="1056" y="592" name="inst_6E3D4017" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="2528" y="592" name="inst_1FA1377A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="3296" y="592" name="inst_722EB9D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="4448" y="592" name="inst_7CF92844" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="4832" y="592" name="inst_883C0C31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Patron" x="5152" y="592" name="inst_64DC7223" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tile_Floor" x="0" y="640" w="5800" h="150" xo="0" yo="0" id="10000000" name="inst_A9B3BECA" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

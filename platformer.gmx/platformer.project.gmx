@@ -34,6 +34,16 @@
     <sprite>sprites\sprite_FerrisBase</sprite>
     <sprite>sprites\sprite_Bar</sprite>
     <sprite>sprites\sprite_NewTable</sprite>
+    <sprite>sprites\sprite_Patron0</sprite>
+    <sprite>sprites\sprite_Patron1</sprite>
+    <sprite>sprites\sprite_Patron2</sprite>
+    <sprite>sprites\sprite_Patron3</sprite>
+    <sprite>sprites\sprite_Patron4</sprite>
+    <sprite>sprites\sprite_Patron5</sprite>
+    <sprite>sprites\sprite_Patron6</sprite>
+    <sprite>sprites\sprite_Patron7</sprite>
+    <sprite>sprites\sprite_Patron8</sprite>
+    <sprite>sprites\sprite_Patron9</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_Floor</background>
@@ -87,6 +97,7 @@
     <object>objects\BarSensor</object>
     <object>objects\Bar</object>
     <object>objects\NewTable</object>
+    <object>objects\Patron</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Introduction</room>
