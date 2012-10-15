@@ -81,7 +81,7 @@ if (phy_linear_velocity_x &gt; BIRD_VELOCITY_THRESHOLD &amp;&amp; face_left) {
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="NewTable">
+    <event eventtype="4" ename="Table">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -238,7 +238,9 @@ if (phy_linear_velocity_x &gt; BIRD_VELOCITY_THRESHOLD &amp;&amp; face_left) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spring_x += HEAD_SPRING_STEP_X;
+            <string>if (spring_x &lt; ViewControl.maximum_x) {
+  spring_x += HEAD_SPRING_STEP_X;
+}
 </string>
           </argument>
         </arguments>
@@ -286,7 +288,9 @@ if (phy_linear_velocity_x &gt; BIRD_VELOCITY_THRESHOLD &amp;&amp; face_left) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spring_x -= HEAD_SPRING_STEP_X;
+            <string>if (spring_x &gt; ViewControl.minimum_x) {
+  spring_x -= HEAD_SPRING_STEP_X;
+}
 </string>
           </argument>
         </arguments>

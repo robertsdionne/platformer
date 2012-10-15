@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ViewControl.target_view_x = view_wview[0];
-Head.spring_x = view_wview[0];
-Bird.spring_x = view_wview[0] + 3.0/4.0 * view_wview[0];
+            <string>ViewControl.target_view_x = 0;
+Head.spring_x = 3.0/4.0 * view_wview[0];
+Bird.spring_x = 3.0/4.0 * view_wview[0];
 </string>
           </argument>
         </arguments>

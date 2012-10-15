@@ -106,7 +106,7 @@ physics_apply_force(
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="NewTable">
+    <event eventtype="4" ename="Table">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -200,7 +200,9 @@ ViewControl.flinch = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spring_x += HEAD_SPRING_STEP_X;
+            <string>if (spring_x &lt; ViewControl.maximum_x) {
+  spring_x += HEAD_SPRING_STEP_X;
+}
 </string>
           </argument>
         </arguments>
@@ -223,7 +225,9 @@ ViewControl.flinch = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spring_x -= HEAD_SPRING_STEP_X;
+            <string>if (spring_x &gt; ViewControl.minimum_x) {
+  spring_x -= HEAD_SPRING_STEP_X;
+}
 </string>
           </argument>
         </arguments>

@@ -83,7 +83,6 @@
     <object>objects\BucketWall</object>
     <object>objects\BucketFloor</object>
     <object>objects\FerrisWheel</object>
-    <object>objects\Table</object>
     <object>objects\Wreath</object>
     <object>objects\Greenery</object>
     <object>objects\Pretzel</object>
@@ -91,12 +90,12 @@
     <object>objects\Block</object>
     <object>objects\IntroductionControl</object>
     <object>objects\ViewControl</object>
-    <object>objects\ViewSensor0</object>
     <object>objects\ViewSensor1</object>
+    <object>objects\ViewSensor2</object>
     <object>objects\FerrisBase</object>
     <object>objects\BarSensor</object>
     <object>objects\Bar</object>
-    <object>objects\NewTable</object>
+    <object>objects\Table</object>
     <object>objects\Patron</object>
   </objects>
   <rooms name="rooms">

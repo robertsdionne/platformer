@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>// Instance Variables
 target_view_x = 0;
+minimum_x = 0;
+maximum_x = view_wview[0];
 flinched = false;
 flinch = false;
 </string>
