@@ -177,6 +177,7 @@ physics_apply_force(
   beer[next_beer].released = true;
   next_beer += 1;
 }
+ViewControl.flinch = true;
 </string>
           </argument>
         </arguments>
