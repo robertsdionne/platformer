@@ -105,18 +105,20 @@
     <room>rooms\Introduction</room>
     <room>rooms\room0</room>
   </rooms>
-  <constants number="33">
+  <constants number="35">
     <constant name="BACKGROUND_SPEED">8</constant>
     <constant name="BEER_ALARM_RATE">5</constant>
     <constant name="BEER_ANGLE_TOLERANCE">30</constant>
     <constant name="BEER_COUNT">10</constant>
     <constant name="BEER_MAX_COLLIDE_VELOCITY">8</constant>
     <constant name="BIRD_MAX_ROPE_LENGTH">736</constant>
+    <constant name="BIRD_SPAWN_RATIO">.75</constant>
     <constant name="BIRD_TORQUE_SPRING_CONSTANT">.125</constant>
     <constant name="BIRD_VELOCITY_THRESHOLD">2</constant>
     <constant name="BUCKET_SPRING_CONSTANT">10</constant>
     <constant name="BUCKET_WALL_LIMIT">52</constant>
     <constant name="BUCKET_WALL_X_OFFSET">16</constant>
+    <constant name="DANCE_FRAMES">16</constant>
     <constant name="FERRIS_WHEEL_BUCKET_COUNT">5</constant>
     <constant name="FERRIS_WHEEL_BUCKET_RADIUS">256</constant>
     <constant name="FERRIS_WHEEL_TURN_RATE">2 * pi / 30 / 30</constant>

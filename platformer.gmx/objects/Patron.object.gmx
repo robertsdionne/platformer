@@ -56,9 +56,9 @@ frame = 0;
           <argument>
             <kind>1</kind>
             <string>frame += 1;
-dance_move1 = do_dance_move(frame, dance_move1, 16);
-dance_move2 = do_dance_move(frame, dance_move2, 16);
-dance_move3 = do_dance_move(frame, dance_move3, 16);
+dance_move1 = do_dance_move(frame, dance_move1, DANCE_FRAMES);
+dance_move2 = do_dance_move(frame, dance_move2, DANCE_FRAMES);
+dance_move3 = do_dance_move(frame, dance_move3, DANCE_FRAMES);
 </string>
           </argument>
         </arguments>
