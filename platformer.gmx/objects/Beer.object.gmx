@@ -109,7 +109,7 @@ alarm[0] = BEER_ALARM_RATE;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="NewTable">
+    <event eventtype="4" ename="Table">
       <action>
         <libid>1</libid>
         <id>603</id>

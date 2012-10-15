@@ -29,6 +29,7 @@
 ViewControl.minimum_x = view_wview[0];
 ViewControl.maximum_x = 2 * view_wview[0];
 Bird.spring_x = view_wview[0] + 3.0/4.0 * view_wview[0];
+background_visible[1] = true;
 </string>
           </argument>
         </arguments>

@@ -6,3 +6,4 @@ with(beer) {
   effect_create_above(ef_smoke, phy_com_x, phy_com_y, 1, c_white);
   instance_destroy();
 }
+flinch_crowd();

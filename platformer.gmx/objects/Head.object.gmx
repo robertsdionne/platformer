@@ -28,10 +28,13 @@
             <string>// Instance Variables
 spring_x = phy_com_x;
 spring_length = phy_com_y - HAND_Y;
+//JUMP_ROPE_LENGTH = spring_length - ROPE_DEFORM_FRACTION * spring_length;
+CROUCH_ROPE_LENGTH = spring_length + ROPE_DEFORM_FRACTION * spring_length;
 MIN_ROPE_LENGTH = spring_length;
 MAX_ROPE_LENGTH = spring_length;
 next_beer = 0;
 may_jump = true;
+crouching = false;
 
 // Setup
 var head, skirt;
@@ -93,6 +96,9 @@ alarm[0] = JUMP_REFRESH;
           <argument>
             <kind>1</kind>
             <string>var length, nx, ny, ds;
+if (crouching) {
+  spring_length = CROUCH_ROPE_LENGTH;
+}
 length = magnitude(phy_com_x - spring_x, phy_com_y - HAND_Y);
 nx = (phy_com_x - spring_x) / length;
 ny = (phy_com_y - HAND_Y) / length;
@@ -101,6 +107,8 @@ physics_apply_force(
     phy_com_x, phy_com_y,
     HEAD_SPRING_CONSTANT * ds * nx,
     HEAD_SPRING_CONSTANT * ds * ny);
+crouching = false;
+spring_length = MAX_ROPE_LENGTH;
 </string>
           </argument>
         </arguments>
@@ -177,8 +185,30 @@ physics_apply_force(
   beer[next_beer].released = true;
   next_beer += 1;
 }
-ViewControl.flinch = true;
-ViewControl.alarm[0] = SILHOUETTE_FLINCH_RATE;
+flinch_crowd();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="83">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>crouching = true;
 </string>
           </argument>
         </arguments>
@@ -278,7 +308,7 @@ draw_self();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (may_jump) {
+            <string>if (!crouching &amp;&amp; may_jump) {
   physics_apply_impulse(phy_com_x, phy_com_y, 0, -JUMP_POWER);
   may_jump = false;
 }
