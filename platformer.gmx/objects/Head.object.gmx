@@ -178,6 +178,7 @@ physics_apply_force(
   next_beer += 1;
 }
 ViewControl.flinch = true;
+ViewControl.alarm[0] = SILHOUETTE_FLINCH_RATE;
 </string>
           </argument>
         </arguments>

@@ -29,7 +29,6 @@
 target_view_x = 0;
 minimum_x = 0;
 maximum_x = view_wview[0];
-flinched = false;
 flinch = false;
 </string>
           </argument>
@@ -54,7 +53,6 @@ flinch = false;
           <argument>
             <kind>1</kind>
             <string>flinch = false;
-flinched = false;
 </string>
           </argument>
         </arguments>
@@ -83,11 +81,9 @@ view_xview[0] += dx / VIEW_RATE_DIVISOR;
 background_y[1] -= BACKGROUND_SPEED;
 background_y[2] += BACKGROUND_SPEED;
 background_x[5] = SILHOUETTE_PARALAX * view_xview[0];
-if (flinch &amp;&amp; !flinched) {
+if (flinch) {
   background_index[5] = background_SilhouetteFlinch;
-  alarm[0] = SILHOUETTE_FLINCH_RATE;
-  flinched = true;
-} else if (!flinch &amp;&amp; !flinched) {
+} else {
   background_index[5] = background_Silhouette;
 }
 </string>
