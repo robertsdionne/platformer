@@ -33,6 +33,7 @@
     <sprite>sprites\sprite_Hand2</sprite>
     <sprite>sprites\sprite_FerrisBase</sprite>
     <sprite>sprites\sprite_Bar</sprite>
+    <sprite>sprites\sprite_NewTable</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_Floor</background>
@@ -85,6 +86,7 @@
     <object>objects\FerrisBase</object>
     <object>objects\BarSensor</object>
     <object>objects\Bar</object>
+    <object>objects\NewTable</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Introduction</room>

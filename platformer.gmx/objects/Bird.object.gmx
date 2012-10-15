@@ -81,7 +81,7 @@ if (phy_linear_velocity_x &gt; BIRD_VELOCITY_THRESHOLD &amp;&amp; face_left) {
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="Table">
+    <event eventtype="4" ename="NewTable">
       <action>
         <libid>1</libid>
         <id>603</id>
