@@ -108,7 +108,7 @@
     <room>rooms\Introduction</room>
     <room>rooms\room0</room>
   </rooms>
-  <constants number="35">
+  <constants number="36">
     <constant name="BACKGROUND_SPEED">8</constant>
     <constant name="BEER_ALARM_RATE">5</constant>
     <constant name="BEER_ANGLE_TOLERANCE">30</constant>
@@ -144,6 +144,7 @@
     <constant name="SILHOUETTE_FLINCH_RATE">15</constant>
     <constant name="SILHOUETTE_PARALAX">-1</constant>
     <constant name="VIEW_RATE_DIVISOR">32</constant>
+    <constant name="PATRON_BEER_APPETITE">5</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

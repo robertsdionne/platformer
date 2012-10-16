@@ -33,6 +33,7 @@ dance_move1 = false;
 dance_move2 = false;
 dance_move3 = false;
 frame = 0;
+appetite = PATRON_BEER_APPETITE;
 </string>
           </argument>
         </arguments>
@@ -64,6 +65,32 @@ dance_move3 = do_dance_move(frame, dance_move3, DANCE_FRAMES);
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="EmptyBeer">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>effect_create_above(ef_firework, phy_com_x, phy_com_y, 2, c_red);
+if (appetite &gt; 0) {
+  appetite -= 1;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -81,11 +108,16 @@ dance_move3 = do_dance_move(frame, dance_move3, DANCE_FRAMES);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var offset1, offset2, offset3;
+            <string>var offset1, offset2, offset3, subimage;
 offset1 = dance_move_offset(dance_move1, -2);
 offset2 = dance_move_offset(dance_move2, -2);
 offset3 = dance_move_offset(dance_move3, 2);
-draw_sprite_ext(sprite, 0, phy_position_x, phy_position_y + offset1, scale, 1, -phy_rotation + offset2 + offset3, c_white, 1);
+if (appetite &lt;= 0) {
+  subimage = 2;
+} else {
+  subimage = 0;
+}
+draw_sprite_ext(sprite, subimage, phy_position_x, phy_position_y + offset1, scale, 1, -phy_rotation + offset2 + offset3, c_white, 1);
 </string>
           </argument>
         </arguments>
@@ -93,7 +125,7 @@ draw_sprite_ext(sprite, 0, phy_position_x, phy_position_y + offset1, scale, 1, -
     </event>
   </events>
   <PhysicsObject>-1</PhysicsObject>
-  <PhysicsObjectSensor>0</PhysicsObjectSensor>
+  <PhysicsObjectSensor>-1</PhysicsObjectSensor>
   <PhysicsObjectShape>1</PhysicsObjectShape>
   <PhysicsObjectDensity>0</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
