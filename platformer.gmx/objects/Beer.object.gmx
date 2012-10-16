@@ -29,6 +29,7 @@
 clanked = false;
 previously_clanked = false;
 released = false;
+released_by_bird = false;
 
 // Setup
 alarm[0] = random(BEER_ALARM_RATE);

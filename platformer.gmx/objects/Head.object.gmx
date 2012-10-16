@@ -185,6 +185,7 @@ spring_length = MAX_ROPE_LENGTH;
             <string>if (next_beer &lt; BEER_COUNT) {
   physics_joint_delete(beer_joint[next_beer]);
   beer[next_beer].released = true;
+  beer[next_beer].released_by_bird = true;
   next_beer += 1;
 }
 if (!hit_by_bird) {

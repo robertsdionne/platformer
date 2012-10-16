@@ -8,4 +8,6 @@ with(beer) {
 }
 flinch_crowd();
 ViewControl.marionette_score -= SCORE_AMOUNT;
-ViewControl.bird_score += SCORE_AMOUNT;
+if (beer.released_by_bird) {
+  ViewControl.bird_score += SCORE_AMOUNT;
+}
