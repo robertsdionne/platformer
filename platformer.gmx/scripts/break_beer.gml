@@ -7,3 +7,5 @@ with(beer) {
   instance_destroy();
 }
 flinch_crowd();
+ViewControl.marionette_score -= SCORE_AMOUNT;
+ViewControl.bird_score += SCORE_AMOUNT;
