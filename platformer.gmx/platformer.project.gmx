@@ -108,7 +108,7 @@
     <room>rooms\Introduction</room>
     <room>rooms\room0</room>
   </rooms>
-  <constants number="37">
+  <constants number="38">
     <constant name="BACKGROUND_SPEED">8</constant>
     <constant name="BEER_ALARM_RATE">5</constant>
     <constant name="BEER_ANGLE_TOLERANCE">30</constant>
@@ -143,6 +143,7 @@
     <constant name="PUPPET_SHOULDER_Y">-15</constant>
     <constant name="ROPE_DEFORM_FRACTION">.125</constant>
     <constant name="SCORE_AMOUNT">5</constant>
+    <constant name="SCORE_TEXT_SCALE">4</constant>
     <constant name="SILHOUETTE_FLINCH_RATE">15</constant>
     <constant name="SILHOUETTE_PARALAX">-1</constant>
     <constant name="VIEW_RATE_DIVISOR">32</constant>
