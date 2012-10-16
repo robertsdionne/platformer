@@ -35,6 +35,7 @@ MAX_ROPE_LENGTH = spring_length;
 next_beer = 0;
 may_jump = true;
 crouching = false;
+hit_by_bird = false;
 
 // Setup
 var head, skirt;
@@ -72,6 +73,7 @@ alarm[0] = JUMP_REFRESH;
           <argument>
             <kind>1</kind>
             <string>may_jump = true;
+hit_by_bird = false;
 alarm[0] = JUMP_REFRESH;
 </string>
           </argument>
@@ -184,6 +186,10 @@ spring_length = MAX_ROPE_LENGTH;
   physics_joint_delete(beer_joint[next_beer]);
   beer[next_beer].released = true;
   next_beer += 1;
+}
+if (!hit_by_bird) {
+  audio_play_sound(sound_Bird, random(1), false);
+  hit_by_bird = true;
 }
 flinch_crowd();
 </string>
