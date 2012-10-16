@@ -15,6 +15,7 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprite_Beer</sprite>
+    <sprite>sprites\sprite_EmptyBeer</sprite>
     <sprite>sprites\sprite_Head</sprite>
     <sprite>sprites\sprite_Body</sprite>
     <sprite>sprites\sprite_Skirt</sprite>
@@ -83,6 +84,7 @@
     <object>objects\Body</object>
     <object>objects\Skirt</object>
     <object>objects\Beer</object>
+    <object>objects\EmptyBeer</object>
     <object>objects\Bucket</object>
     <object>objects\BucketWall</object>
     <object>objects\BucketFloor</object>
