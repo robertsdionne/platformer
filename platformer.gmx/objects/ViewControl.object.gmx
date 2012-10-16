@@ -111,8 +111,8 @@ if (flinch) {
           <argument>
             <kind>1</kind>
             <string>if (marionette_score != 0 || bird_score != 0) {
-  draw_text_transformed_color(128, 32, string(marionette_score), SCORE_TEXT_SCALE, SCORE_TEXT_SCALE, 0, c_green, c_green, c_green, c_green, 1);
-  draw_text_transformed_color(view_wview[0]-128-64, 32, string(bird_score), SCORE_TEXT_SCALE, SCORE_TEXT_SCALE, 0, c_red, c_red, c_red, c_red, 1);
+  draw_text_transformed_color(128, 32, "€" + string(marionette_score), SCORE_TEXT_SCALE, SCORE_TEXT_SCALE, 0, c_green, c_green, c_green, c_green, 1);
+  draw_text_transformed_color(view_wview[0]-128-64, 32, "€" + string(bird_score), SCORE_TEXT_SCALE, SCORE_TEXT_SCALE, 0, c_red, c_red, c_red, c_red, 1);
 }
 </string>
           </argument>
