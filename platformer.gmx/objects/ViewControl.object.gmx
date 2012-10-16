@@ -110,7 +110,7 @@ if (flinch) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (marionette_score &gt; 0 || bird_score &gt; 0) {
+            <string>if (marionette_score != 0 || bird_score != 0) {
   draw_text_transformed_color(32, 32, string(marionette_score), 4, 4, 0, c_green, c_green, c_green, c_green, 1);
   draw_text_transformed_color(1920-64, 32, string(bird_score), 4, 4, 0, c_red, c_red, c_red, c_red, 1);
 }

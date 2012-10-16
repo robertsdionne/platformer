@@ -128,11 +128,11 @@ alarm[0] = BEER_ALARM_RATE;
           <argument>
             <kind>1</kind>
             <string>// Collide
-//maybe_break_beer(self);
 if (released) {
-  var beer;
-  beer = instance_create(phy_position_x, phy_position_y, EmptyBeer);
-  beer.phy_rotation = phy_rotation;
+  var empty_beer;
+  empty_beer = instance_create(phy_position_x, phy_position_y, EmptyBeer);
+  empty_beer.phy_rotation = phy_rotation;
+  empty_beer.released_by_bird = released_by_bird;
   instance_destroy();
 }
 </string>

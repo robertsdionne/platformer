@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>audio_play_sound(choose(sound_Clink, sound_Clank, sound_Clinky), random(1), false);
+            <string>// Instance Variables
+released_by_bird = false;
+
+// Setup
+audio_play_sound(choose(sound_Clink, sound_Clank, sound_Clinky), random(1), false);
 </string>
           </argument>
         </arguments>

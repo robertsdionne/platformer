@@ -86,6 +86,9 @@ dance_move3 = do_dance_move(frame, dance_move3, DANCE_FRAMES);
   effect_create_above(ef_firework, phy_com_x, phy_com_y, 2, c_red);
   appetite -= 1;
   ViewControl.marionette_score += SCORE_AMOUNT;
+  if (other.released_by_bird) {
+    ViewControl.bird_score -= SCORE_AMOUNT;
+  }
 }
 </string>
           </argument>
