@@ -46,6 +46,7 @@
     <sprite>sprites\sprite_Patron7</sprite>
     <sprite>sprites\sprite_Patron8</sprite>
     <sprite>sprites\sprite_Patron9</sprite>
+    <sprite>sprites\sprite_ScoreDelta</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_Floor</background>
@@ -103,6 +104,7 @@
     <object>objects\Bar</object>
     <object>objects\Table</object>
     <object>objects\Patron</object>
+    <object>objects\ScoreDelta</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Introduction</room>

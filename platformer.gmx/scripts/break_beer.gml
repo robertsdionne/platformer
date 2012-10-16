@@ -1,4 +1,4 @@
-var beer;
+var beer, score_delta;
 beer = argument0;
 audio_play_sound(
     choose(sound_BreakBeerLow, sound_BreakBeerHigh), random(1), false);
@@ -8,6 +8,8 @@ with(beer) {
 }
 flinch_crowd();
 ViewControl.marionette_score -= SCORE_AMOUNT;
+instance_create(beer.phy_position_x - 32, beer.phy_position_y, ScoreDelta);
 if (beer.released_by_bird) {
   ViewControl.bird_score += SCORE_AMOUNT;
+  instance_create(beer.phy_position_x + 32, beer.phy_position_y, ScoreDelta);
 }
