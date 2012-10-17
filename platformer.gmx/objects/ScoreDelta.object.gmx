@@ -77,10 +77,10 @@ alarm[0] = SCORE_DELTA_EXPIRE;
           <argument>
             <kind>1</kind>
             <string>var prefix;
-if (amount &lt; 0) {
-  prefix = "-";
-} else {
+if (amount &gt;= 0) {
   prefix = "+";
+} else {
+  prefix = "";
 }
 draw_text_transformed_color(phy_position_x + view_xview[0], phy_position_y, prefix + string(amount), SCORE_TEXT_SCALE, SCORE_TEXT_SCALE, 0, color, color, color, color, 1);
 </string>
