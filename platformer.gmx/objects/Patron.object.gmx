@@ -139,9 +139,9 @@ draw_sprite_ext(sprite, subimage, phy_position_x, phy_position_y + offset1, scal
   <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
   <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
   <PhysicsShapePoints>
-    <point>0,0</point>
-    <point>64,0</point>
-    <point>64,160</point>
-    <point>0,160</point>
+    <point>16,0</point>
+    <point>48,0</point>
+    <point>48,160</point>
+    <point>16,160</point>
   </PhysicsShapePoints>
 </object>
