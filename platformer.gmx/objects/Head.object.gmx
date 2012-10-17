@@ -103,18 +103,37 @@ alarm[0] = JUMP_REFRESH;
 if (crouching) {
   spring_length = CROUCH_ROPE_LENGTH;
 }
-if (flip_clockwise_rewards_left &gt; 0 &amp;&amp; phy_rotation &gt; 360.0) {
+if (flip_clockwise_rewards_left &gt; 2 &amp;&amp; phy_rotation &gt; 360.0) {
   ViewControl.marionette_score += SCORE_AMOUNT;
   create_score_delta(phy_position_x, phy_position_y, flip_clockwise_rewards_left * SCORE_AMOUNT, c_green);
   flip_clockwise_rewards_left -= 1;
-  phy_rotation = phy_rotation % 360.0;
 }
-if (flip_counterclockwise_rewards_left &gt; 0 &amp;&amp; phy_rotation &lt; -360.0) {
+if (flip_clockwise_rewards_left &gt; 1 &amp;&amp; phy_rotation &gt; 2*360.0) {
+  ViewControl.marionette_score += SCORE_AMOUNT;
+  create_score_delta(phy_position_x, phy_position_y, flip_clockwise_rewards_left * SCORE_AMOUNT, c_green);
+  flip_clockwise_rewards_left -= 1;
+}
+if (flip_clockwise_rewards_left &gt; 0 &amp;&amp; phy_rotation &gt; 3*360.0) {
+  ViewControl.marionette_score += SCORE_AMOUNT;
+  create_score_delta(phy_position_x, phy_position_y, flip_clockwise_rewards_left * SCORE_AMOUNT, c_green);
+  flip_clockwise_rewards_left -= 1;
+}
+if (flip_counterclockwise_rewards_left &gt; 2 &amp;&amp; phy_rotation &lt; -360.0) {
   ViewControl.marionette_score += SCORE_AMOUNT;
   create_score_delta(phy_position_x, phy_position_y, flip_counterclockwise_rewards_left * SCORE_AMOUNT, c_green);
   flip_counterclockwise_rewards_left -= 1;
-  phy_rotation = phy_rotation % 360.0;
 }
+if (flip_counterclockwise_rewards_left &gt; 1 &amp;&amp; phy_rotation &lt; 2*-360.0) {
+  ViewControl.marionette_score += SCORE_AMOUNT;
+  create_score_delta(phy_position_x, phy_position_y, flip_counterclockwise_rewards_left * SCORE_AMOUNT, c_green);
+  flip_counterclockwise_rewards_left -= 1;
+}
+if (flip_counterclockwise_rewards_left &gt; 0 &amp;&amp; phy_rotation &lt; 3*-360.0) {
+  ViewControl.marionette_score += SCORE_AMOUNT;
+  create_score_delta(phy_position_x, phy_position_y, flip_counterclockwise_rewards_left * SCORE_AMOUNT, c_green);
+  flip_counterclockwise_rewards_left -= 1;
+}
+
 length = magnitude(phy_com_x - spring_x, phy_com_y - HAND_Y);
 nx = (phy_com_x - spring_x) / length;
 ny = (phy_com_y - HAND_Y) / length;
