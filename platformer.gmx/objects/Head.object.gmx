@@ -36,8 +36,8 @@ next_beer = 0;
 may_jump = true;
 crouching = false;
 hit_by_bird = false;
-flip_clockwise_rewarded = false;
-flip_counterclockwise_rewarded = false;
+flip_clockwise_rewards_left = 3;
+flip_counterclockwise_rewards_left = 3;
 
 // Setup
 var head, skirt;
@@ -103,16 +103,16 @@ alarm[0] = JUMP_REFRESH;
 if (crouching) {
   spring_length = CROUCH_ROPE_LENGTH;
 }
-if (!flip_clockwise_rewarded &amp;&amp; phy_rotation &gt; 360.0) {
+if (flip_clockwise_rewards_left &gt; 0 &amp;&amp; phy_rotation &gt; 360.0) {
   ViewControl.marionette_score += SCORE_AMOUNT;
-  create_score_delta(phy_position_x, phy_position_y, SCORE_AMOUNT, c_green);
-  flip_clockwise_rewarded = true;
+  create_score_delta(phy_position_x, phy_position_y, flip_clockwise_rewards_left * SCORE_AMOUNT, c_green);
+  flip_clockwise_rewards_left -= 1;
   phy_rotation = phy_rotation % 360.0;
 }
-if (!flip_counterclockwise_rewarded &amp;&amp; phy_rotation &lt; -360.0) {
+if (flip_counterclockwise_rewards_left &gt; 0 &amp;&amp; phy_rotation &lt; -360.0) {
   ViewControl.marionette_score += SCORE_AMOUNT;
-  create_score_delta(phy_position_x, phy_position_y, SCORE_AMOUNT, c_green);
-  flip_counterclockwise_rewarded = true;
+  create_score_delta(phy_position_x, phy_position_y, flip_counterclockwise_rewards_left * SCORE_AMOUNT, c_green);
+  flip_counterclockwise_rewards_left -= 1;
   phy_rotation = phy_rotation % 360.0;
 }
 length = magnitude(phy_com_x - spring_x, phy_com_y - HAND_Y);
