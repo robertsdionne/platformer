@@ -78,6 +78,7 @@
     <script>scripts\flinch_crowd.gml</script>
     <script>scripts\do_dance_move.gml</script>
     <script>scripts\dance_move_offset.gml</script>
+    <script>scripts\create_score_delta.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Head</object>
@@ -110,7 +111,7 @@
     <room>rooms\Introduction</room>
     <room>rooms\room0</room>
   </rooms>
-  <constants number="38">
+  <constants number="39">
     <constant name="BACKGROUND_SPEED">8</constant>
     <constant name="BEER_ALARM_RATE">5</constant>
     <constant name="BEER_ANGLE_TOLERANCE">30</constant>
@@ -149,6 +150,7 @@
     <constant name="SILHOUETTE_FLINCH_RATE">15</constant>
     <constant name="SILHOUETTE_PARALAX">-1</constant>
     <constant name="VIEW_RATE_DIVISOR">32</constant>
+    <constant name="SCORE_DELTA_EXPIRE">45</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

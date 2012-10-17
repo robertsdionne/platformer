@@ -86,10 +86,10 @@ dance_move3 = do_dance_move(frame, dance_move3, DANCE_FRAMES);
   effect_create_above(ef_firework, phy_com_x, phy_com_y, 2, c_red);
   appetite -= 1;
   ViewControl.marionette_score += SCORE_AMOUNT;
-  instance_create(other.phy_position_x - 32, other.phy_position_y, ScoreDelta);
+  create_score_delta(other.phy_position_x - 32, other.phy_position_y, SCORE_AMOUNT, c_green);
   if (other.released_by_bird) {
     ViewControl.bird_score -= SCORE_AMOUNT;
-  instance_create(other.phy_position_x + 32, other.phy_position_y, ScoreDelta);
+    create_score_delta(other.phy_position_x + 32, other.phy_position_y, -SCORE_AMOUNT, c_red);
   }
 }
 </string>
@@ -140,8 +140,8 @@ draw_sprite_ext(sprite, subimage, phy_position_x, phy_position_y + offset1, scal
   <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
   <PhysicsShapePoints>
     <point>0,0</point>
-    <point>44,0</point>
-    <point>44,98</point>
-    <point>0,98</point>
+    <point>64,0</point>
+    <point>64,160</point>
+    <point>0,160</point>
   </PhysicsShapePoints>
 </object>
