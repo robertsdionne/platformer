@@ -107,11 +107,13 @@ if (!flip_clockwise_rewarded &amp;&amp; phy_rotation &gt; 360.0) {
   ViewControl.marionette_score += SCORE_AMOUNT;
   create_score_delta(phy_position_x, phy_position_y, SCORE_AMOUNT, c_green);
   flip_clockwise_rewarded = true;
+  phy_rotation = phy_rotation % 360.0;
 }
 if (!flip_counterclockwise_rewarded &amp;&amp; phy_rotation &lt; -360.0) {
   ViewControl.marionette_score += SCORE_AMOUNT;
   create_score_delta(phy_position_x, phy_position_y, SCORE_AMOUNT, c_green);
   flip_counterclockwise_rewarded = true;
+  phy_rotation = phy_rotation % 360.0;
 }
 length = magnitude(phy_com_x - spring_x, phy_com_y - HAND_Y);
 nx = (phy_com_x - spring_x) / length;
