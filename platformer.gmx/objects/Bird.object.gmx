@@ -29,6 +29,7 @@
 spring_x = phy_com_x;
 spring_length = phy_com_y - HAND_Y;
 player = 2;
+can_caw = !joystick_check_button(player, JOYSTICK_BUTTON_X);
 
 // Setup
 falling = true;
@@ -60,6 +61,13 @@ if (joystick_exists(player)) {
   maybe_move(self, joystick_xpos(player) * HEAD_SPRING_STEP_X);
   maybe_move_rope(self, joystick_ypos(player) * HEAD_SPRING_STEP);
   physics_apply_torque(BIRD_TILT_TORQUE * joystick_upos(player));
+  if (can_caw &amp;&amp; joystick_check_button(player, JOYSTICK_BUTTON_X)) {
+    can_caw = false;
+    // Play caw sound.
+  }
+  if (!can_caw &amp;&amp; !joystick_check_button(player, JOYSTICK_BUTTON_X)) {
+    can_caw = true;
+  }
 }
 length = magnitude(phy_com_x - spring_x, phy_com_y - HAND_Y);
 nx = (phy_com_x - spring_x) / length;
@@ -328,6 +336,9 @@ if (face_left) {
   x_scale = -1;
 }
 draw_sprite_ext(sprite, 0, phy_position_x, phy_position_y, x_scale, 1, -phy_rotation, c_white, 1);
+if (!can_caw) {
+  draw_text(phy_com_x - x_scale * 64, phy_com_y, "Caw!");
+}
 </string>
           </argument>
         </arguments>
