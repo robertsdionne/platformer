@@ -28,6 +28,7 @@
             <string>// Instance Variables
 spring_x = phy_com_x;
 spring_length = phy_com_y - HAND_Y;
+player = 2;
 
 // Setup
 falling = true;
@@ -55,6 +56,11 @@ face_left = true;
           <argument>
             <kind>1</kind>
             <string>var length, nx, ny, ds;
+if (joystick_exists(player)) {
+  maybe_move(self, joystick_xpos(player) * HEAD_SPRING_STEP_X);
+  maybe_move_rope(self, joystick_ypos(player) * HEAD_SPRING_STEP);
+  physics_apply_torque(BIRD_TILT_TORQUE * joystick_upos(player));
+}
 length = magnitude(phy_com_x - spring_x, phy_com_y - HAND_Y);
 nx = (phy_com_x - spring_x) / length;
 ny = (phy_com_y - HAND_Y) / length;
@@ -213,9 +219,7 @@ if (phy_linear_velocity_x &gt; BIRD_VELOCITY_THRESHOLD &amp;&amp; face_left) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (spring_length &lt; BIRD_MAX_ROPE_LENGTH) {
-  spring_length += HEAD_SPRING_STEP;
-}
+            <string>maybe_move_rope(self, HEAD_SPRING_STEP);
 </string>
           </argument>
         </arguments>
@@ -238,9 +242,7 @@ if (phy_linear_velocity_x &gt; BIRD_VELOCITY_THRESHOLD &amp;&amp; face_left) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (spring_x &lt; ViewControl.maximum_x) {
-  spring_x += HEAD_SPRING_STEP_X;
-}
+            <string>maybe_move(self, HEAD_SPRING_STEP_X);
 </string>
           </argument>
         </arguments>
@@ -263,9 +265,7 @@ if (phy_linear_velocity_x &gt; BIRD_VELOCITY_THRESHOLD &amp;&amp; face_left) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (spring_length &gt; 0) {
-  spring_length -= HEAD_SPRING_STEP;
-}
+            <string>maybe_move_rope(self, -HEAD_SPRING_STEP);
 </string>
           </argument>
         </arguments>
@@ -288,9 +288,7 @@ if (phy_linear_velocity_x &gt; BIRD_VELOCITY_THRESHOLD &amp;&amp; face_left) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (spring_x &gt; ViewControl.minimum_x) {
-  spring_x -= HEAD_SPRING_STEP_X;
-}
+            <string>maybe_move(self, -HEAD_SPRING_STEP_X);
 </string>
           </argument>
         </arguments>

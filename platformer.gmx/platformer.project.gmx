@@ -79,6 +79,10 @@
     <script>scripts\do_dance_move.gml</script>
     <script>scripts\dance_move_offset.gml</script>
     <script>scripts\create_score_delta.gml</script>
+    <script>scripts\maybe_move.gml</script>
+    <script>scripts\maybe_jump.gml</script>
+    <script>scripts\maybe_drop_beer.gml</script>
+    <script>scripts\maybe_move_rope.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Head</object>
@@ -111,7 +115,7 @@
     <room>rooms\Introduction</room>
     <room>rooms\room0</room>
   </rooms>
-  <constants number="39">
+  <constants number="43">
     <constant name="BACKGROUND_SPEED">8</constant>
     <constant name="BEER_ALARM_RATE">5</constant>
     <constant name="BEER_ANGLE_TOLERANCE">30</constant>
@@ -119,6 +123,7 @@
     <constant name="BEER_MAX_COLLIDE_VELOCITY">8</constant>
     <constant name="BIRD_MAX_ROPE_LENGTH">736</constant>
     <constant name="BIRD_SPAWN_RATIO">.75</constant>
+    <constant name="BIRD_TILT_TORQUE">.0625</constant>
     <constant name="BIRD_TORQUE_SPRING_CONSTANT">.125</constant>
     <constant name="BIRD_VELOCITY_THRESHOLD">2</constant>
     <constant name="BUCKET_SPRING_CONSTANT">10</constant>
@@ -136,9 +141,12 @@
     <constant name="HEAD_SPRING_CONSTANT">.25</constant>
     <constant name="HEAD_SPRING_STEP_X">4</constant>
     <constant name="HEAD_SPRING_STEP">8</constant>
+    <constant name="JOYSTICK_ACTION_THRESHOLD">0.5</constant>
+    <constant name="JOYSTICK_BUTTON_X">1</constant>
     <constant name="JUMP_POWER">2.5</constant>
     <constant name="JUMP_REFRESH">45</constant>
     <constant name="PATRON_BEER_APPETITE">5</constant>
+    <constant name="PLAYER_TILT_TORQUE">.5</constant>
     <constant name="PUPPET_ARM_WIDTH">8</constant>
     <constant name="PUPPET_HAND_X">40</constant>
     <constant name="PUPPET_HAND_Y">0</constant>
@@ -146,11 +154,11 @@
     <constant name="PUPPET_SHOULDER_Y">-15</constant>
     <constant name="ROPE_DEFORM_FRACTION">.125</constant>
     <constant name="SCORE_AMOUNT">5</constant>
+    <constant name="SCORE_DELTA_EXPIRE">45</constant>
     <constant name="SCORE_TEXT_SCALE">4</constant>
     <constant name="SILHOUETTE_FLINCH_RATE">15</constant>
     <constant name="SILHOUETTE_PARALAX">-1</constant>
     <constant name="VIEW_RATE_DIVISOR">32</constant>
-    <constant name="SCORE_DELTA_EXPIRE">45</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

@@ -28,16 +28,18 @@
             <string>// Instance Variables
 spring_x = phy_com_x;
 spring_length = phy_com_y - HAND_Y;
-//JUMP_ROPE_LENGTH = spring_length - ROPE_DEFORM_FRACTION * spring_length;
-CROUCH_ROPE_LENGTH = spring_length + ROPE_DEFORM_FRACTION * spring_length;
 MIN_ROPE_LENGTH = spring_length;
 MAX_ROPE_LENGTH = spring_length;
+//JUMP_ROPE_LENGTH = MIN_ROPE_LENGTH - ROPE_DEFORM_FRACTION * MIN_ROPE_LENGTH;
+CROUCH_ROPE_LENGTH = MIN_ROPE_LENGTH + ROPE_DEFORM_FRACTION * MIN_ROPE_LENGTH;
 next_beer = 0;
 may_jump = true;
-crouching = false;
+crouching = 0;
 hit_by_bird = false;
 flip_clockwise_rewards_left = 3;
 flip_counterclockwise_rewards_left = 3;
+player = 1;
+can_drop = !joystick_check_button(player, JOYSTICK_BUTTON_X);
 
 // Setup
 var head, skirt;
@@ -100,9 +102,26 @@ alarm[0] = JUMP_REFRESH;
           <argument>
             <kind>1</kind>
             <string>var length, nx, ny, ds;
-if (crouching) {
-  spring_length = CROUCH_ROPE_LENGTH;
+if (joystick_exists(player)) {
+  maybe_move(self, joystick_xpos(player) * HEAD_SPRING_STEP_X); 
+  with(body) {
+    physics_apply_torque(PLAYER_TILT_TORQUE * joystick_upos(other.player));
+  }
+  if (joystick_ypos(player) &lt; -JOYSTICK_ACTION_THRESHOLD) {
+    maybe_jump(self);
+  }
+  if (joystick_ypos(player) &gt; 0) {
+    crouching = joystick_ypos(player);
+  }
+  if (can_drop &amp;&amp; joystick_check_button(player, JOYSTICK_BUTTON_X)) {
+    can_drop = false;
+    maybe_drop_beer(self);
+  }
+  if (!can_drop &amp;&amp; !joystick_check_button(player, JOYSTICK_BUTTON_X)) {
+    can_drop = true;
+  }
 }
+spring_length = MIN_ROPE_LENGTH + crouching * ROPE_DEFORM_FRACTION * MIN_ROPE_LENGTH;
 if (flip_clockwise_rewards_left &gt; 2 &amp;&amp; phy_rotation &gt; 360.0) {
   ViewControl.marionette_score += SCORE_AMOUNT;
   create_score_delta(phy_position_x, phy_position_y, flip_clockwise_rewards_left * SCORE_AMOUNT, c_green);
@@ -142,7 +161,7 @@ physics_apply_force(
     phy_com_x, phy_com_y,
     HEAD_SPRING_CONSTANT * ds * nx,
     HEAD_SPRING_CONSTANT * ds * ny);
-crouching = false;
+crouching = 0;
 spring_length = MAX_ROPE_LENGTH;
 
 </string>
@@ -249,7 +268,9 @@ flinch_crowd();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>crouching = true;
+            <string>if (!joystick_exists(player)) {
+  crouching = 1;
+}
 </string>
           </argument>
         </arguments>
@@ -272,8 +293,8 @@ flinch_crowd();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (spring_x &lt; ViewControl.maximum_x) {
-  spring_x += HEAD_SPRING_STEP_X;
+            <string>if (!joystick_exists(player)) {
+  maybe_move(self, HEAD_SPRING_STEP_X);
 }
 </string>
           </argument>
@@ -297,9 +318,35 @@ flinch_crowd();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (spring_x &gt; ViewControl.minimum_x) {
-  spring_x -= HEAD_SPRING_STEP_X;
+            <string>if (!joystick_exists(player)) {
+  maybe_move(self, -HEAD_SPRING_STEP_X);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//var i;
+//for (i = 1; i &lt;= 32; i += 1) {
+//  draw_text(view_wview[0] / 2, 128 + 16 * i, string(i) + ": " + string(joystick_check_button(player, i)));
+//}
 </string>
           </argument>
         </arguments>
@@ -349,9 +396,8 @@ draw_self();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!crouching &amp;&amp; may_jump) {
-  physics_apply_impulse(phy_com_x, phy_com_y, 0, -JUMP_POWER);
-  may_jump = false;
+            <string>if (!joystick_exists(player)) {
+  maybe_jump(self);
 }
 </string>
           </argument>
@@ -375,10 +421,8 @@ draw_self();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (next_beer &lt; BEER_COUNT) {
-  physics_joint_delete(beer_joint[next_beer]);
-  beer[next_beer].released = true;
-  next_beer += 1;
+            <string>if (!joystick_exists(player)) {
+  maybe_drop_beer(self);
 }
 </string>
           </argument>
