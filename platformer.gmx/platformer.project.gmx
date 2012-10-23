@@ -54,6 +54,7 @@
     <background>background\background_Background</background>
     <background>background\background_Overlay</background>
     <background>background\background_Curtains</background>
+    <background>background\background_CurtainsIntro</background>
     <background>background\background_Silhouette</background>
     <background>background\background_SilhouetteFlinch</background>
     <background>background\background_Black</background>
