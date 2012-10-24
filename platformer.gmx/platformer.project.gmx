@@ -12,6 +12,9 @@
     <sound>sound\sound_BreakBeerHigh</sound>
     <sound>sound\sound_Music</sound>
     <sound>sound\sound_Bird</sound>
+    <sound>sound\sound_Kick2</sound>
+    <sound>sound\sound_Kick3</sound>
+    <sound>sound\sound_Kick1</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprite_Beer</sprite>

@@ -79,6 +79,8 @@ may_kick_bird = true;
   with (other) {
     physics_apply_impulse(phy_com_x, phy_com_y, KICK_FORCE * dx, 0);
   }
+  flinch_crowd();
+  audio_play_sound(choose(sound_Kick1, sound_Kick2, sound_Kick3), random(1), false);
   may_kick_bird = false;
   alarm[0] = KICK_REFRESH;
 }
