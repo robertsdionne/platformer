@@ -124,7 +124,7 @@
     <room>rooms\Introduction</room>
     <room>rooms\room0</room>
   </rooms>
-  <constants number="46">
+  <constants number="47">
     <constant name="BACKGROUND_SPEED">8</constant>
     <constant name="BEER_ALARM_RATE">5</constant>
     <constant name="BEER_ANGLE_TOLERANCE">30</constant>
@@ -138,6 +138,7 @@
     <constant name="BUCKET_SPRING_CONSTANT">10</constant>
     <constant name="BUCKET_WALL_LIMIT">52</constant>
     <constant name="BUCKET_WALL_X_OFFSET">16</constant>
+    <constant name="CURTAIN_RAISE_RATE">8</constant>
     <constant name="DANCE_FRAMES">16</constant>
     <constant name="FERRIS_WHEEL_BUCKET_COUNT">5</constant>
     <constant name="FERRIS_WHEEL_BUCKET_RADIUS">256</constant>

@@ -86,11 +86,14 @@ dx = target_view_x - view_xview[0];
 view_xview[0] += dx / VIEW_RATE_DIVISOR;
 background_y[1] -= BACKGROUND_SPEED;
 background_y[2] += BACKGROUND_SPEED;
-background_x[5] = SILHOUETTE_PARALAX * view_xview[0];
+background_x[6] = SILHOUETTE_PARALAX * view_xview[0];
 if (flinch) {
-  background_index[5] = background_SilhouetteFlinch;
+  background_index[6] = background_SilhouetteFlinch;
 } else {
-  background_index[5] = background_Silhouette;
+  background_index[6] = background_Silhouette;
+}
+if (background_y[4] &gt; -1080) {
+  background_y[4] -= CURTAIN_RAISE_RATE;
 }
 </string>
           </argument>
