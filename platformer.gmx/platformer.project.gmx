@@ -87,7 +87,11 @@
     <script>scripts\maybe_jump.gml</script>
     <script>scripts\maybe_drop_beer.gml</script>
     <script>scripts\maybe_move_rope.gml</script>
+    <script>scripts\time_to_string.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font_RosewoodStd</font>
+  </fonts>
   <objects name="objects">
     <object>objects\Head</object>
     <object>objects\Bird</object>
@@ -119,7 +123,7 @@
     <room>rooms\Introduction</room>
     <room>rooms\room0</room>
   </rooms>
-  <constants number="45">
+  <constants number="46">
     <constant name="BACKGROUND_SPEED">8</constant>
     <constant name="BEER_ALARM_RATE">5</constant>
     <constant name="BEER_ANGLE_TOLERANCE">30</constant>
@@ -151,7 +155,7 @@
     <constant name="JUMP_REFRESH">45</constant>
     <constant name="KICK_FORCE">2</constant>
     <constant name="KICK_REFRESH">45</constant>
-    <constant name="PATRON_BEER_APPETITE">5</constant>
+    <constant name="PATRON_BEER_APPETITE">2</constant>
     <constant name="PLAYER_TILT_TORQUE">.5</constant>
     <constant name="PUPPET_ARM_WIDTH">8</constant>
     <constant name="PUPPET_HAND_X">40</constant>
@@ -160,8 +164,9 @@
     <constant name="PUPPET_SHOULDER_Y">-15</constant>
     <constant name="ROPE_DEFORM_FRACTION">.125</constant>
     <constant name="SCORE_AMOUNT">5</constant>
+    <constant name="SCORE_COLOR">c_orange</constant>
     <constant name="SCORE_DELTA_EXPIRE">45</constant>
-    <constant name="SCORE_TEXT_SCALE">4</constant>
+    <constant name="SCORE_TEXT_SCALE">1</constant>
     <constant name="SILHOUETTE_FLINCH_RATE">15</constant>
     <constant name="SILHOUETTE_PARALAX">-1</constant>
     <constant name="VIEW_RATE_DIVISOR">32</constant>

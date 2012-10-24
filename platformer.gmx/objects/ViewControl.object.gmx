@@ -32,6 +32,10 @@ maximum_x = view_wview[0];
 flinch = false;
 marionette_score = 0;
 bird_score = 0;
+objective_time = get_timer() + 3 * 60 * 1000 * 1000;
+
+// Setup
+draw_set_font(font_RosewoodStd);
 </string>
           </argument>
         </arguments>
@@ -111,8 +115,18 @@ if (flinch) {
           <argument>
             <kind>1</kind>
             <string>if (marionette_score != 0 || bird_score != 0) {
-  draw_text_transformed_color(128, 32, "€" + string(marionette_score), SCORE_TEXT_SCALE, SCORE_TEXT_SCALE, 0, c_green, c_green, c_green, c_green, 1);
+  draw_text_transformed_color(128, view_hview[0] - 128, string(marionette_score), SCORE_TEXT_SCALE, SCORE_TEXT_SCALE, 0,
+      SCORE_COLOR, SCORE_COLOR, SCORE_COLOR, SCORE_COLOR, 1);
   //draw_text_transformed_color(view_wview[0]-128-64, 32, "€" + string(bird_score), SCORE_TEXT_SCALE, SCORE_TEXT_SCALE, 0, c_red, c_red, c_red, c_red, 1);
+}
+var remaining_time;
+remaining_time = objective_time - get_timer();
+if (remaining_time &gt; 0) {
+  draw_text_transformed_color(view_wview[0] / 2 - 128, view_hview[0] - 128, time_to_string(remaining_time),
+      SCORE_TEXT_SCALE, SCORE_TEXT_SCALE, 0, SCORE_COLOR, SCORE_COLOR, SCORE_COLOR, SCORE_COLOR, 1);
+} else {
+  draw_text_transformed_color(view_wview[0] / 2 - 128, view_hview[0] - 128, "0:00", SCORE_TEXT_SCALE, SCORE_TEXT_SCALE, 0,
+      SCORE_COLOR, SCORE_COLOR, SCORE_COLOR, SCORE_COLOR, 1);
 }
 </string>
           </argument>

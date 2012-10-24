@@ -86,7 +86,7 @@ dance_move3 = do_dance_move(frame, dance_move3, DANCE_FRAMES);
   effect_create_above(ef_smoke, phy_com_x, phy_com_y, 1, c_white);
   appetite -= 1;
   ViewControl.marionette_score += SCORE_AMOUNT;
-  create_score_delta(other.phy_position_x - 32, other.phy_position_y, SCORE_AMOUNT, c_green);
+  create_score_delta(128 + -64 + random(128), view_hview[0] - 256, SCORE_AMOUNT, c_green);
   //if (other.released_by_bird &amp;&amp; ViewControl.bird_score &gt;= SCORE_AMOUNT) {
   //  ViewControl.bird_score -= SCORE_AMOUNT;
   //  create_score_delta(other.phy_position_x + 32, other.phy_position_y, -SCORE_AMOUNT, c_red);
