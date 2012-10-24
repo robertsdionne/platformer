@@ -146,7 +146,7 @@
     <constant name="JOYSTICK_BUTTON_X">1</constant>
     <constant name="JUMP_POWER">2.5</constant>
     <constant name="JUMP_REFRESH">45</constant>
-    <constant name="KICK_FORCE">10</constant>
+    <constant name="KICK_FORCE">2</constant>
     <constant name="KICK_REFRESH">45</constant>
     <constant name="PATRON_BEER_APPETITE">5</constant>
     <constant name="PLAYER_TILT_TORQUE">.5</constant>

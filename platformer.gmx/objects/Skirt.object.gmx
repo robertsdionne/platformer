@@ -77,7 +77,7 @@ may_kick_bird = true;
   var dx;
   dx = sign(other.phy_com_x - phy_com_x);
   with (other) {
-    physics_apply_force(phy_com_x, phy_com_y, KICK_FORCE * dx, 0);
+    physics_apply_impulse(phy_com_x, phy_com_y, KICK_FORCE * dx, 0);
   }
   may_kick_bird = false;
   alarm[0] = KICK_REFRESH;
