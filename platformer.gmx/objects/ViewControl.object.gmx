@@ -95,6 +95,10 @@ if (flinch) {
 if (background_y[4] &gt; -1080) {
   background_y[4] -= CURTAIN_RAISE_RATE;
 }
+if (objective_time - get_timer() &lt; 0) {
+  audio_stop_sound(sound_Music);
+  game_restart();
+}
 </string>
           </argument>
         </arguments>
