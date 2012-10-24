@@ -162,7 +162,7 @@
     <constant name="PUPPET_HAND_Y">0</constant>
     <constant name="PUPPET_SHOULDER_X">10</constant>
     <constant name="PUPPET_SHOULDER_Y">-15</constant>
-    <constant name="ROPE_DEFORM_FRACTION">.125</constant>
+    <constant name="ROPE_DEFORM_FRACTION">.25</constant>
     <constant name="SCORE_AMOUNT">5</constant>
     <constant name="SCORE_COLOR">c_orange</constant>
     <constant name="SCORE_DELTA_EXPIRE">45</constant>

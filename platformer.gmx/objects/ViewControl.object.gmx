@@ -122,8 +122,15 @@ if (flinch) {
 var remaining_time;
 remaining_time = objective_time - get_timer();
 if (remaining_time &gt; 0) {
-  draw_text_transformed_color(view_wview[0] / 2 - 128, view_hview[0] - 128, time_to_string(remaining_time),
-      SCORE_TEXT_SCALE, SCORE_TEXT_SCALE, 0, SCORE_COLOR, SCORE_COLOR, SCORE_COLOR, SCORE_COLOR, 1);
+  if (remaining_time % (60 * 1000 * 1000) &lt; 5 * 1000 * 1000) {
+    if (floor(remaining_time / 1000) % 200 &lt; 100) {
+      draw_text_transformed_color(view_wview[0] / 2 - 128, view_hview[0] - 128, time_to_string(remaining_time),
+          SCORE_TEXT_SCALE, SCORE_TEXT_SCALE, 0, SCORE_COLOR, SCORE_COLOR, SCORE_COLOR, SCORE_COLOR, 1);
+    }
+  } else {
+    draw_text_transformed_color(view_wview[0] / 2 - 128, view_hview[0] - 128, time_to_string(remaining_time),
+        SCORE_TEXT_SCALE, SCORE_TEXT_SCALE, 0, SCORE_COLOR, SCORE_COLOR, SCORE_COLOR, SCORE_COLOR, 1);
+  }
 } else {
   draw_text_transformed_color(view_wview[0] / 2 - 128, view_hview[0] - 128, "0:00", SCORE_TEXT_SCALE, SCORE_TEXT_SCALE, 0,
       SCORE_COLOR, SCORE_COLOR, SCORE_COLOR, SCORE_COLOR, 1);
