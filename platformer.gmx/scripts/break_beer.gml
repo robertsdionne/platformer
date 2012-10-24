@@ -7,9 +7,11 @@ with(beer) {
   instance_destroy();
 }
 flinch_crowd();
-ViewControl.marionette_score -= SCORE_AMOUNT;
-create_score_delta(beer.phy_position_x - 32, beer.phy_position_y, -SCORE_AMOUNT, c_green);
+//if (ViewControl.marionette_score >= SCORE_AMOUNT) {
+//  ViewControl.marionette_score -= SCORE_AMOUNT;
+//  create_score_delta(beer.phy_position_x - 32, beer.phy_position_y, -SCORE_AMOUNT, c_green);
+//}
 if (beer.released_by_bird) {
   ViewControl.bird_score += SCORE_AMOUNT;
-  create_score_delta(beer.phy_position_x + 32, beer.phy_position_y, SCORE_AMOUNT, c_red);
+  //create_score_delta(beer.phy_position_x + 32, beer.phy_position_y, SCORE_AMOUNT, c_red);
 }

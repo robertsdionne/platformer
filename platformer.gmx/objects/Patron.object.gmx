@@ -83,14 +83,14 @@ dance_move3 = do_dance_move(frame, dance_move3, DANCE_FRAMES);
           <argument>
             <kind>1</kind>
             <string>if (appetite &gt; 0) {
-  effect_create_above(ef_firework, phy_com_x, phy_com_y, 2, c_red);
+  effect_create_above(ef_smoke, phy_com_x, phy_com_y, 1, c_white);
   appetite -= 1;
   ViewControl.marionette_score += SCORE_AMOUNT;
   create_score_delta(other.phy_position_x - 32, other.phy_position_y, SCORE_AMOUNT, c_green);
-  if (other.released_by_bird) {
-    ViewControl.bird_score -= SCORE_AMOUNT;
-    create_score_delta(other.phy_position_x + 32, other.phy_position_y, -SCORE_AMOUNT, c_red);
-  }
+  //if (other.released_by_bird &amp;&amp; ViewControl.bird_score &gt;= SCORE_AMOUNT) {
+  //  ViewControl.bird_score -= SCORE_AMOUNT;
+  //  create_score_delta(other.phy_position_x + 32, other.phy_position_y, -SCORE_AMOUNT, c_red);
+  //}
 }
 </string>
           </argument>
