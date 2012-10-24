@@ -102,6 +102,12 @@ alarm[0] = JUMP_REFRESH;
           <argument>
             <kind>1</kind>
             <string>var length, nx, ny, ds;
+if (next_beer &gt;= BEER_COUNT
+    &amp;&amp; ViewControl.minimum_x + 11 * 32 &lt; body.phy_com_x &amp;&amp; body.phy_com_x &lt; ViewControl.minimum_x + 13 * 32
+    &amp;&amp; abs(body.phy_rotation % 360.0) &lt; BEER_ANGLE_TOLERANCE) {
+  next_beer = 0;
+  create_beers(self, phy_position_x, phy_position_y, phy_com_x, phy_com_y, body);
+}
 if (joystick_exists(player)) {
   maybe_move(self, joystick_xpos(player) * HEAD_SPRING_STEP_X); 
   with(body) {
@@ -187,32 +193,6 @@ spring_length = MAX_ROPE_LENGTH;
           <argument>
             <kind>1</kind>
             <string>// Collide
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="BarSensor">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (next_beer &gt;= BEER_COUNT &amp;&amp; abs(body.phy_rotation % 360.0) &lt; BEER_ANGLE_TOLERANCE) {
-  next_beer = 0;
-  create_beers(self, phy_position_x, phy_position_y, phy_com_x, phy_com_y, body);
-}
 </string>
           </argument>
         </arguments>

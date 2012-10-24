@@ -115,7 +115,6 @@
     <object>objects\ViewSensor1</object>
     <object>objects\ViewSensor2</object>
     <object>objects\FerrisBase</object>
-    <object>objects\BarSensor</object>
     <object>objects\Bar</object>
     <object>objects\Table</object>
     <object>objects\Patron</object>
