@@ -51,6 +51,7 @@
     <sprite>sprites\sprite_Patron8</sprite>
     <sprite>sprites\sprite_Patron9</sprite>
     <sprite>sprites\sprite_ScoreDelta</sprite>
+    <sprite>sprites\sprite_FinterPoint</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_Floor</background>
@@ -119,6 +120,8 @@
     <object>objects\Table</object>
     <object>objects\Patron</object>
     <object>objects\ScoreDelta</object>
+    <object>objects\FingerPoint0</object>
+    <object>objects\FingerPoint1</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Introduction</room>
