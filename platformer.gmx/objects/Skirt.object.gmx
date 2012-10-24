@@ -56,7 +56,7 @@ may_kick_bird = true;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="Body">
+    <event eventtype="4" ename="Bird">
       <action>
         <libid>1</libid>
         <id>603</id>
